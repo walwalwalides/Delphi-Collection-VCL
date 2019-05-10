@@ -9,9 +9,17 @@
 | File | Contents | 
 | --- | --- |
 | .gitignore | Git ignores the files in this file |
-| ESP32LED | How to Use ESP32 to Control LED With Delphi Via WiFi  |
-| RFID_ACCESS  |Read RFID via ardouino (serial communication) |
-| M&L DETECTOR | Create Your Own Motion Light Detector |
-| Digi7Segment| Controle 7 Segment Display Via Ardouino - (Serial Communication) |
+|BatterflyTray|Create Animated Tray Icon|
+|CheecKfont|Tools for specific task|
+|CheeKtool|Special Tools Used For Specific Task|
+|CompUPX|Compression all executable files using UPX|
+|CountDown|How to construct a Timer that counts down from a certain number to indicate the beginning or end of an Event|
+|CreEvent|How Create Stored Event in SQLite|
+|MySQL_StoreProc|How create stored procedure in MySQL|
+|NOTyMSG|How to create a custom notification in windows|
+|RegisterKey|Tools to create key in Registry |
+|StudNote|Save student grades and calculate the average|
+|TraitExcept|How to Define Custom Exceptions in Delphi|
+|XMLDLL|Relite Main Application with DLL using XML files|
 | README.md | The readme for this project
 
