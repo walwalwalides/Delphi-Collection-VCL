@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONFIG>
+  <PLUGIN Name="HOME" Lib="HOME.dll"/>
+  <SKIN PATH="Skin"/>
+  <BUTTON NAME="HOME" DRAWFORM="MainForm">
+    <EVENT NAME="ONCLICK">
+      <CALLFUNCTION VALUE="ShowNavigationForm"/>
+    </EVENT>
+  </BUTTON>
+</CONFIG>

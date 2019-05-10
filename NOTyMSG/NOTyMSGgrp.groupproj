@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CF08C228-8C1B-42A1-9942-1CF1C8C9D833}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="NOTySEND\NOTySEND.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="NOTyMSG\NOTyMSG.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="NOTySEND">
+        <MSBuild Projects="NOTySEND\NOTySEND.dproj"/>
+    </Target>
+    <Target Name="NOTySEND:Clean">
+        <MSBuild Projects="NOTySEND\NOTySEND.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NOTySEND:Make">
+        <MSBuild Projects="NOTySEND\NOTySEND.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NOTyMSG">
+        <MSBuild Projects="NOTyMSG\NOTyMSG.dproj"/>
+    </Target>
+    <Target Name="NOTyMSG:Clean">
+        <MSBuild Projects="NOTyMSG\NOTyMSG.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NOTyMSG:Make">
+        <MSBuild Projects="NOTyMSG\NOTyMSG.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="NOTySEND;NOTyMSG"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="NOTySEND:Clean;NOTyMSG:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="NOTySEND:Make;NOTyMSG:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

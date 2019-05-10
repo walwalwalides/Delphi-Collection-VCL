@@ -1,0 +1,7 @@
+[MySQL_StoreProc]
+MyConnec=408745910
+[SrvC]
+host=127.0.0.1
+port=3306
+[MySQL]
+database=MYWALID

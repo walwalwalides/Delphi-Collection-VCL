@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{695189B1-4EA0-4B5A-B6CD-020A2E1840FE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CountDownApp\CountDown.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CountDownDLL\CountDownDLL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CountDown">
+        <MSBuild Projects="CountDownApp\CountDown.dproj"/>
+    </Target>
+    <Target Name="CountDown:Clean">
+        <MSBuild Projects="CountDownApp\CountDown.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CountDown:Make">
+        <MSBuild Projects="CountDownApp\CountDown.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CountDownDLL">
+        <MSBuild Projects="CountDownDLL\CountDownDLL.dproj"/>
+    </Target>
+    <Target Name="CountDownDLL:Clean">
+        <MSBuild Projects="CountDownDLL\CountDownDLL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CountDownDLL:Make">
+        <MSBuild Projects="CountDownDLL\CountDownDLL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CountDown;CountDownDLL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CountDown:Clean;CountDownDLL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CountDown:Make;CountDownDLL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
