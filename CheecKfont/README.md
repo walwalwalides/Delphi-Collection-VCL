@@ -1,12 +1,12 @@
 # CheecKfont
-- Tools for specific task               
+- Check installed Fonts Windows              
 ![](CheecKfont.png) 
 
 
 # Features  
 
 - Installing a font from Delphi
-- showing all installed fonts
+- Showing All Installed fonts
 
 
 
