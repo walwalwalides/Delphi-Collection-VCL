@@ -1,8 +1,7 @@
 # Delphi-Collection
 - My Own Delphi-Collection
-**Authors:**  *WalWalWalides*
 ![](Delphi-Collection.jpg)
-
+**Authors:**  *WalWalWalides*
 ------
 
 ## Contains
