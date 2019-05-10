@@ -10,7 +10,7 @@
 | --- | --- |
 | .gitignore | Git ignores the files in this file |
 |BatterflyTray|Create Animated Tray Icon|
-|CheecKfont|Tools for specific task|
+|CheecKfont|Check Installed Fonts Windows|
 |CheeKtool|Special Tools Used For Specific Task|
 |CompUPX|Compression all executable files using UPX|
 |CountDown|How to construct a Timer that counts down from a certain number to indicate the beginning or end of an Event|
