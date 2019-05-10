@@ -1,5 +1,5 @@
 # CheecKfont
-- Check installed Fonts Windows              
+- Check Installed Fonts Windows              
 ![](CheecKfont.png) 
 
 
