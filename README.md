@@ -9,7 +9,7 @@
 | File | Contents | 
 | --- | --- |
 | .gitignore | Git ignores the files in this file |
-|BatterflyTray|Create Animated Tray Icon|
+|[BatterflyTray](https://github.com/walwalwalides/Delphi-Collection/tree/master/BatterflyTray)|Create Animated Tray Icon|
 |CheecKfont|Check Installed Fonts Windows|
 |CheeKtool|Special Tools Used For Specific Task|
 |CompUPX|Compression all executable files using UPX|
