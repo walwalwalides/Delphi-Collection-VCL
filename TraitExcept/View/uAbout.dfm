@@ -334,7 +334,7 @@ object frmAbout: TfrmAbout
     Width = 185
     Height = 180
     Lines.Strings = (
-      '        Software name    : ComUPX'
+      '        Software name    : TraitExcept'
       '        Software version : V1.0.0.0'
       ''
       ''

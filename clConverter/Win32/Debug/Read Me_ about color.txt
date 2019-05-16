@@ -1,0 +1,3 @@
+For exemple we have : rgb 79 65 159
+For delphi format : $009F414F
+For color Hex :     #4f419f -> www.color-hex.com
