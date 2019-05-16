@@ -38,7 +38,6 @@ object frmMain: TfrmMain
     TabOrder = 0
     OnClick = pnlColorClick
     OnMouseLeave = pnlColorMouseLeave
-    ExplicitLeft = 8
   end
   object Panel1: TPanel
     AlignWithMargins = True
