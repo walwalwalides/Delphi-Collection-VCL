@@ -94,9 +94,7 @@ var
   COL: LongInt;
 begin
   COL := ColorToRGB(Color);
-  { first convert TColor to Integer to remove the higher bits }
-  { erst TColor zu Integer, da die Unnötigen höheren Bit entfernt werden }
-  Result := '#' + IntToHex(COL and $FF, 2) + IntToHex(COL shr 8 and $FF, 2) + IntToHex(COL shr 16 and $FF, 2);
+  Result := '#' + IntToHex(COL and $FF, 2) + IntToHex(COL shr 8 and $FF, 2) + IntToHex(COL shr 16 and $FF, 2);  {  convert TColor to Integer to remove the higher bits }
 end;
 
 function ColorToHtml2(Clr: TColor): string;
