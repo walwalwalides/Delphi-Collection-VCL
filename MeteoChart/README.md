@@ -1,6 +1,6 @@
 # MeteoChart
-- Display As Many Graphics As Desired by the user with The Curves of
-Temperature, Humidity and Atmospheric Pressure                  
+- Display As Many Graphics As Desired by the User with The Curves of
+Temperature, Humidity and Atmospheric Pressure .                  
 ![](MeteoChart.png) 
 
 
