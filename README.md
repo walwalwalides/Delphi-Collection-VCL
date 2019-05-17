@@ -21,5 +21,9 @@
 |[StudNote](https://github.com/walwalwalides/Delphi-Collection/tree/master/StudNote)|Save student grades and calculate the average|
 |[TraitExcept](https://github.com/walwalwalides/Delphi-Collection/tree/master/TraitExcept)|How to Define Custom Exceptions in Delphi|
 |[XMLDLL](https://github.com/walwalwalides/Delphi-Collection/tree/master/XMLDLL)|Relite Main Application with DLL using XML files|
+|[clConverter](https://github.com/walwalwalides/Delphi-Collection/tree/master/clConverter)|Relite Main Application with DLL using XML files|
+|[MyAlbumDLL](https://github.com/walwalwalides/Delphi-Collection/tree/master/MyAlbumDLL)|Load Image From a DLL Resource|
+
+
 | README.md | The readme for this project
 
