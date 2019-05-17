@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{24097B90-642F-405B-A003-A114405EF288}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DLL\DLLImages.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mon projet\MyAlbumDLL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DLLImages">
+        <MSBuild Projects="DLL\DLLImages.dproj"/>
+    </Target>
+    <Target Name="DLLImages:Clean">
+        <MSBuild Projects="DLL\DLLImages.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DLLImages:Make">
+        <MSBuild Projects="DLL\DLLImages.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyAlbumDLL">
+        <MSBuild Projects="Mon projet\MyAlbumDLL.dproj"/>
+    </Target>
+    <Target Name="MyAlbumDLL:Clean">
+        <MSBuild Projects="Mon projet\MyAlbumDLL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyAlbumDLL:Make">
+        <MSBuild Projects="Mon projet\MyAlbumDLL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DLLImages;MyAlbumDLL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DLLImages:Clean;MyAlbumDLL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DLLImages:Make;MyAlbumDLL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
