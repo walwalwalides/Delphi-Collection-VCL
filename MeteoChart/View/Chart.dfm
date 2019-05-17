@@ -4,7 +4,7 @@ object frmChart: TfrmChart
   Caption = 'Chart'
   ClientHeight = 561
   ClientWidth = 584
-  Color = 8421440
+  Color = 16711422
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -3649,7 +3649,7 @@ object frmChart: TfrmChart
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 145
+    Width = 134
     Height = 555
     Align = alLeft
     Color = clWhite
@@ -3657,11 +3657,17 @@ object frmChart: TfrmChart
     TabOrder = 0
     ExplicitTop = -2
     object GroupBox1: TGroupBox
-      Left = 16
-      Top = 24
+      Left = 10
+      Top = 31
       Width = 113
-      Height = 237
+      Height = 194
       Caption = 'Dispaly'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -3670,6 +3676,30 @@ object frmChart: TfrmChart
         Height = 13
         Caption = '&Number of points :'
         FocusControl = UpDown1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object bvl1: TBevel
+        Left = 16
+        Top = 51
+        Width = 89
+        Height = 2
+      end
+      object bvl2: TBevel
+        Left = 16
+        Top = 90
+        Width = 89
+        Height = 2
+      end
+      object bvl3: TBevel
+        Left = 16
+        Top = 126
+        Width = 89
+        Height = 2
       end
       object chbxTemp: TCheckBox
         Left = 16
@@ -3678,6 +3708,12 @@ object frmChart: TfrmChart
         Height = 17
         Caption = '&Temperature'
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 0
         OnClick = chbxTempClick
@@ -3689,6 +3725,12 @@ object frmChart: TfrmChart
         Height = 17
         Caption = '&Humidity'
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 1
         OnClick = chbxHumiditeClick
@@ -3700,22 +3742,34 @@ object frmChart: TfrmChart
         Height = 17
         Caption = '&Pressure'
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 2
         OnClick = chbxPressionClick
       end
       object edtPoint: TEdit
-        Left = 16
-        Top = 156
+        Left = 17
+        Top = 157
         Width = 31
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
         ReadOnly = True
         TabOrder = 3
         Text = '20'
       end
       object UpDown1: TUpDown
         Left = 47
-        Top = 156
+        Top = 157
         Width = 16
         Height = 21
         Associate = edtPoint
@@ -3727,20 +3781,22 @@ object frmChart: TfrmChart
   end
   object Panel2: TPanel
     AlignWithMargins = True
-    Left = 154
+    Left = 143
     Top = 3
-    Width = 427
+    Width = 438
     Height = 518
     Margins.Bottom = 40
     Align = alClient
+    Color = clWhite
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = -2
-    ExplicitHeight = 533
+    ExplicitLeft = 154
+    ExplicitWidth = 427
     object TempChart: TChart
       AlignWithMargins = True
       Left = 4
       Top = 31
-      Width = 419
+      Width = 430
       Height = 113
       Margins.Top = 30
       BackWall.Brush.Style = bsClear
@@ -3750,7 +3806,7 @@ object frmChart: TfrmChart
       Align = alTop
       Color = clWhite
       TabOrder = 0
-      ExplicitWidth = 431
+      ExplicitWidth = 419
       DefaultCanvas = 'TGDIPlusCanvas'
       PrintMargins = (
         15
@@ -3776,7 +3832,7 @@ object frmChart: TfrmChart
       AlignWithMargins = True
       Left = 4
       Top = 177
-      Width = 419
+      Width = 430
       Height = 111
       Margins.Top = 30
       BackWall.Brush.Style = bsClear
@@ -3786,7 +3842,7 @@ object frmChart: TfrmChart
       Align = alTop
       Color = clWhite
       TabOrder = 1
-      ExplicitWidth = 431
+      ExplicitWidth = 419
       DefaultCanvas = 'TGDIPlusCanvas'
       ColorPaletteIndex = 13
       object LineSeries2: TLineSeries
@@ -3807,7 +3863,7 @@ object frmChart: TfrmChart
       AlignWithMargins = True
       Left = 4
       Top = 321
-      Width = 419
+      Width = 430
       Height = 128
       Margins.Top = 30
       BackWall.Brush.Style = bsClear
@@ -3817,7 +3873,7 @@ object frmChart: TfrmChart
       Align = alTop
       Color = clWhite
       TabOrder = 2
-      ExplicitLeft = 0
+      ExplicitWidth = 419
       DefaultCanvas = 'TGDIPlusCanvas'
       PrintMargins = (
         15
@@ -3840,7 +3896,7 @@ object frmChart: TfrmChart
     end
   end
   object pnlFeed: TPanel
-    Left = 154
+    Left = 341
     Top = 525
     Width = 240
     Height = 33

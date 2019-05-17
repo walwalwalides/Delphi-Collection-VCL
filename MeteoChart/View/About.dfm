@@ -334,8 +334,8 @@ object frmAbout: TfrmAbout
     Width = 185
     Height = 180
     Lines.Strings = (
-      '        Software name    : MeteoChart'
-      '        Software version : V1.0.0.0'
+      '      Software name    : MeteoChart'
+      '      Software version : V1.0.0.0'
       ''
       ''
       ''

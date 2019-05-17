@@ -22,6 +22,7 @@ type
     btnReinit: TButton;
     btnClose: TButton;
     pnlFeed: TPanel;
+    pnlleft: TPanel;
     procedure btnReinitClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
@@ -95,7 +96,8 @@ begin
     Append(Format('Temperature : %d / %d / %d', [Meteo.Temp, FTempMin, FTempMax]));
     Append(Format('Humidity : %d / %d / %d', [Meteo.Humidity, FHumidityMin, FHumidityMax]));
     Append(Format('Pressure : %d / %d / %d', [Meteo.Pressure, FPressureMin, FPressureMax]));
-    Append('---');
+    Append(Format('Timer Interval : %d ', [Meteo.TimerInterval]));
+    Append('----------------------------------------------------------------------------');
   end;
 end;
 

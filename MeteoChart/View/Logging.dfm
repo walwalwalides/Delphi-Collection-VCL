@@ -4,7 +4,7 @@ object frmLogging: TfrmLogging
   Caption = 'Logging'
   ClientHeight = 561
   ClientWidth = 584
-  Color = 8421440
+  Color = 16711422
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -1872,29 +1872,15 @@ object frmLogging: TfrmLogging
     561)
   PixelsPerInch = 96
   TextHeight = 13
-  object memLogging: TMemo
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 332
-    Height = 555
-    Align = alLeft
-    Lines.Strings = (
-      '')
-    TabOrder = 0
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitHeight = 561
-  end
   object pnlFeed: TPanel
     Left = 341
     Top = 525
     Width = 240
     Height = 33
-    Anchors = [akLeft, akBottom]
+    Anchors = [akRight, akBottom]
     Color = clWhite
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 0
     object btnReinit: TButton
       Left = 2
       Top = 3
@@ -1919,6 +1905,32 @@ object frmLogging: TfrmLogging
       Images = frmMain.ilMain
       TabOrder = 1
       OnClick = btnCloseClick
+    end
+  end
+  object pnlleft: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 335
+    Height = 555
+    Align = alLeft
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 0
+    ExplicitTop = 0
+    ExplicitHeight = 561
+    object memLogging: TMemo
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 325
+      Height = 547
+      Align = alLeft
+      Lines.Strings = (
+        '')
+      TabOrder = 0
+      ExplicitHeight = 553
     end
   end
 end

@@ -14,7 +14,7 @@ interface
 
 uses
   SysUtils, Classes, Controls, Forms, Vcl.Graphics,
-  StdCtrls, UInterfaces, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList, System.Actions, Vcl.ActnList, Vcl.Menus;
+  StdCtrls, UInterfaces, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList, System.Actions, Vcl.ActnList, Vcl.Menus, Vcl.ComCtrls;
 
 type
   TfrmMain = class(TForm, IObserver)
@@ -48,13 +48,31 @@ type
     BevelTemperature: TBevel;
     bvlHumidity: TBevel;
     bvlPressure: TBevel;
+    N3: TMenuItem;
+    T1: TMenuItem;
+    N11: TMenuItem;
+    N21: TMenuItem;
+    N51: TMenuItem;
+    N12: TMenuItem;
+    statbrMain: TStatusBar;
+    GroupBox1: TGroupBox;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    acDisChart: TAction;
+    acDisLogging: TAction;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure btnChartClick(Sender: TObject);
-    procedure btnLoggingClick(Sender: TObject);
     procedure actAboutExecute(Sender: TObject);
     procedure actExitExecute(Sender: TObject);
+    procedure N11Click(Sender: TObject);
+    procedure N21Click(Sender: TObject);
+    procedure N51Click(Sender: TObject);
+    procedure N12Click(Sender: TObject);
+    procedure acDisChartExecute(Sender: TObject);
+    procedure acDisLoggingExecute(Sender: TObject);
   private
+
     FObservable: IObservable;
     procedure UpdateObserver(Observable: IObservable);
   public
@@ -62,6 +80,7 @@ type
   end;
 
 var
+  FTimerInterval: Integer = 1000;
   frmMain: TfrmMain;
 
 implementation
@@ -86,11 +105,55 @@ begin
   FObservable.RemoveObserver(Self);
 end;
 
+procedure TfrmMain.N11Click(Sender: TObject);
+begin
+  FTimerInterval := 1000;
+  N11.Checked := True;
+end;
+
+procedure TfrmMain.N12Click(Sender: TObject);
+begin
+  FTimerInterval := 10000;
+  N12.Checked := True;
+end;
+
+procedure TfrmMain.N21Click(Sender: TObject);
+begin
+  FTimerInterval := 2000;
+  N12.Checked := True;
+
+end;
+
+procedure TfrmMain.N51Click(Sender: TObject);
+begin
+  FTimerInterval := 5000;
+  N21.Checked := True;
+end;
+
 procedure TfrmMain.UpdateObserver(Observable: IObservable);
 begin
+  (Observable as IMeteo).SetTimerInterval(FTimerInterval);
+  statbrMain.Panels[0].Text := 'Interval Timer : ' + IntToStr((Observable as IMeteo).GetTimerInterval) + ' (ms)';
+
   lblTemperature.Caption := IntToStr((Observable as IMeteo).GetTemp);
   lblHumidity.Caption := IntToStr((Observable as IMeteo).GetHumidity);
   lblPressure.Caption := IntToStr((Observable as IMeteo).GetPressure);
+end;
+
+procedure TfrmMain.acDisChartExecute(Sender: TObject);
+var
+  ChartMeteoForm: TfrmChart;
+begin
+  ChartMeteoForm := TfrmChart.CreateObserver(FObservable);
+  ChartMeteoForm.Show;
+end;
+
+procedure TfrmMain.acDisLoggingExecute(Sender: TObject);
+var
+  LoggingMeteoForm: TfrmLogging;
+begin
+  LoggingMeteoForm := TfrmLogging.CreateObserver(FObservable);
+  LoggingMeteoForm.Show;
 end;
 
 procedure TfrmMain.actAboutExecute(Sender: TObject);
@@ -113,22 +176,6 @@ end;
 procedure TfrmMain.actExitExecute(Sender: TObject);
 begin
   Application.Terminate;
-end;
-
-procedure TfrmMain.btnChartClick(Sender: TObject);
-var
-  ChartMeteoForm: TfrmChart;
-begin
-  ChartMeteoForm := TfrmChart.CreateObserver(FObservable);
-  ChartMeteoForm.Show;
-end;
-
-procedure TfrmMain.btnLoggingClick(Sender: TObject);
-var
-  LoggingMeteoForm: TfrmLogging;
-begin
-  LoggingMeteoForm := TfrmLogging.CreateObserver(FObservable);
-  LoggingMeteoForm.Show;
 end;
 
 end.

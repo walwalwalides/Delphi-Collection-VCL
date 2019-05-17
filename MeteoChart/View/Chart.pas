@@ -36,6 +36,9 @@ type
     pnlFeed: TPanel;
     btnReinit: TButton;
     btnClose: TButton;
+    bvl1: TBevel;
+    bvl2: TBevel;
+    bvl3: TBevel;
 
     procedure FormDestroy(Sender: TObject);
     procedure chbxTempClick(Sender: TObject);

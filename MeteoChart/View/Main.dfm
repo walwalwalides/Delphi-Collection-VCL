@@ -2,9 +2,9 @@ object frmMain: TfrmMain
   Left = 8
   Top = 22
   Caption = 'MeteoChart'
-  ClientHeight = 239
+  ClientHeight = 409
   ClientWidth = 562
-  Color = 8421440
+  Color = 16711422
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,139 +14,179 @@ object frmMain: TfrmMain
   OldCreateOrder = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  DesignSize = (
+    562
+    409)
   PixelsPerInch = 96
   TextHeight = 13
-  object pnlMain: TPanel
+  object statbrMain: TStatusBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 387
+    Width = 556
+    Height = 19
+    Panels = <
+      item
+        Text = 'Interval Timer : '
+        Width = 200
+      end
+      item
+        Width = 50
+      end>
+    ExplicitLeft = 8
+    ExplicitTop = 394
+    ExplicitWidth = 562
+  end
+  object GroupBox1: TGroupBox
     Left = 8
-    Top = 8
-    Width = 244
-    Height = 137
-    Color = clWhite
-    ParentBackground = False
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 16
-      Top = 48
-      Width = 97
-      Height = 13
-      Caption = 'Temperature (in '#176'C) :'
+    Top = 152
+    Width = 257
+    Height = 229
+    Anchors = [akLeft, akBottom]
+    Caption = 'Meteo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object pnlFeed: TPanel
+      Left = 7
+      Top = 191
+      Width = 244
+      Height = 33
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      object btnChart: TButton
+        Left = 4
+        Top = 2
+        Width = 114
+        Height = 25
+        Cursor = crHandPoint
+        Action = acDisChart
+        ImageIndex = 0
+        Images = ilMain
+        TabOrder = 0
+      end
+      object btnLogging: TButton
+        Left = 124
+        Top = 2
+        Width = 114
+        Height = 25
+        Cursor = crHandPoint
+        Action = acDisLogging
+        ImageIndex = 1
+        Images = ilMain
+        TabOrder = 1
+      end
     end
-    object Label2: TLabel
-      Left = 16
-      Top = 72
-      Width = 74
-      Height = 13
-      Caption = 'Humidity (in %) :'
-    end
-    object Label3: TLabel
-      Left = 16
-      Top = 96
-      Width = 103
-      Height = 13
-      Caption = 'Pressure (in millibars) :'
-    end
-    object lblHumidity: TLabel
-      Left = 136
-      Top = 72
-      Width = 6
-      Height = 13
-      Caption = '?'
-    end
-    object lblInfo: TLabel
-      AlignWithMargins = True
-      Left = 4
-      Top = 4
-      Width = 236
-      Height = 13
-      Align = alTop
-      Alignment = taCenter
-      Caption = 'Current Information'
+    object pnlMain: TPanel
+      Left = 7
+      Top = 50
+      Width = 244
+      Height = 137
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
+      Font.Style = []
+      ParentBackground = False
       ParentFont = False
-      ExplicitWidth = 109
-    end
-    object lblPressure: TLabel
-      Left = 125
-      Top = 96
-      Width = 6
-      Height = 13
-      Caption = '?'
-    end
-    object lblTemperature: TLabel
-      Left = 136
-      Top = 48
-      Width = 6
-      Height = 13
-      Caption = '?'
-    end
-    object bvlHead: TBevel
-      AlignWithMargins = True
-      Left = 4
-      Top = 23
-      Width = 236
-      Height = 112
-      Align = alTop
-      ExplicitWidth = 269
-    end
-    object BevelTemperature: TBevel
-      Left = 119
-      Top = 40
-      Width = 38
-      Height = 26
-    end
-    object bvlHumidity: TBevel
-      Left = 119
-      Top = 66
-      Width = 38
-      Height = 26
-    end
-    object bvlPressure: TBevel
-      Left = 119
-      Top = 89
-      Width = 38
-      Height = 26
-    end
-  end
-  object pnlFeed: TPanel
-    Left = 8
-    Top = 149
-    Width = 244
-    Height = 33
-    Color = clWhite
-    ParentBackground = False
-    TabOrder = 1
-    object btnChart: TButton
-      Left = 4
-      Top = 2
-      Width = 114
-      Height = 25
-      Cursor = crHandPoint
-      Caption = 'Chart'
-      ImageIndex = 0
-      Images = ilMain
-      TabOrder = 0
-      OnClick = btnChartClick
-    end
-    object btnLogging: TButton
-      Left = 124
-      Top = 2
-      Width = 114
-      Height = 25
-      Cursor = crHandPoint
-      Caption = 'Logging'
-      ImageIndex = 1
-      Images = ilMain
       TabOrder = 1
-      OnClick = btnLoggingClick
+      object Label1: TLabel
+        Left = 16
+        Top = 48
+        Width = 97
+        Height = 13
+        Caption = 'Temperature (in '#176'C) :'
+      end
+      object Label2: TLabel
+        Left = 16
+        Top = 72
+        Width = 74
+        Height = 13
+        Caption = 'Humidity (in %) :'
+      end
+      object Label3: TLabel
+        Left = 16
+        Top = 96
+        Width = 103
+        Height = 13
+        Caption = 'Pressure (in millibars) :'
+      end
+      object lblHumidity: TLabel
+        Left = 136
+        Top = 72
+        Width = 6
+        Height = 13
+        Caption = '?'
+      end
+      object lblInfo: TLabel
+        AlignWithMargins = True
+        Left = 4
+        Top = 4
+        Width = 236
+        Height = 13
+        Align = alTop
+        Alignment = taCenter
+        Caption = 'Current Information'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitWidth = 109
+      end
+      object lblPressure: TLabel
+        Left = 125
+        Top = 96
+        Width = 6
+        Height = 13
+        Caption = '?'
+      end
+      object lblTemperature: TLabel
+        Left = 136
+        Top = 48
+        Width = 6
+        Height = 13
+        Caption = '?'
+      end
+      object bvlHead: TBevel
+        AlignWithMargins = True
+        Left = 4
+        Top = 23
+        Width = 236
+        Height = 112
+        Align = alTop
+        ExplicitWidth = 269
+      end
+      object BevelTemperature: TBevel
+        Left = 119
+        Top = 40
+        Width = 38
+        Height = 26
+      end
+      object bvlHumidity: TBevel
+        Left = 119
+        Top = 66
+        Width = 38
+        Height = 26
+      end
+      object bvlPressure: TBevel
+        Left = 119
+        Top = 89
+        Width = 38
+        Height = 26
+      end
     end
   end
   object ilMain: TImageList
-    Left = 520
-    Top = 60
+    Left = 512
+    Top = 116
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -420,10 +460,10 @@ object frmMain: TfrmMain
       000000000000}
   end
   object MMMain: TMainMenu
-    Left = 480
-    Top = 72
+    Left = 512
+    Top = 64
     object File1: TMenuItem
-      Caption = 'File'
+      Caption = '&File'
       object Exit1: TMenuItem
         Action = actExit
         ShortCut = 16453
@@ -432,8 +472,44 @@ object frmMain: TfrmMain
         Caption = '-'
       end
     end
+    object N4: TMenuItem
+      Caption = '&Display'
+      object N5: TMenuItem
+        Action = acDisChart
+      end
+      object N6: TMenuItem
+        Action = acDisLogging
+      end
+    end
+    object N3: TMenuItem
+      Caption = '&Option'
+      object T1: TMenuItem
+        Caption = '&Timer'
+        object N11: TMenuItem
+          Caption = '1 Second'
+          Checked = True
+          RadioItem = True
+          OnClick = N11Click
+        end
+        object N21: TMenuItem
+          Caption = '2 Second'
+          RadioItem = True
+          OnClick = N21Click
+        end
+        object N51: TMenuItem
+          Caption = '5 Second'
+          RadioItem = True
+          OnClick = N51Click
+        end
+        object N12: TMenuItem
+          Caption = '10 Second'
+          RadioItem = True
+          OnClick = N12Click
+        end
+      end
+    end
     object A2: TMenuItem
-      Caption = 'About'
+      Caption = '&About'
       object actAbout1: TMenuItem
         Action = actAbout
       end
@@ -443,7 +519,7 @@ object frmMain: TfrmMain
     end
   end
   object ActionList1: TActionList
-    Left = 521
+    Left = 513
     Top = 16
     object actOpenFile: TAction
       Category = 'File'
@@ -471,6 +547,18 @@ object frmMain: TfrmMain
       Caption = 'Info'
       ShortCut = 16457
       OnExecute = actAboutExecute
+    end
+    object acDisChart: TAction
+      Category = 'Display'
+      Caption = '&Chart'
+      ShortCut = 16451
+      OnExecute = acDisChartExecute
+    end
+    object acDisLogging: TAction
+      Category = 'Display'
+      Caption = '&Logging'
+      ShortCut = 16460
+      OnExecute = acDisLoggingExecute
     end
   end
 end

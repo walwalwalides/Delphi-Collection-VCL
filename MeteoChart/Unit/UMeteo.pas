@@ -2,10 +2,10 @@
   Software Name : 	MeteoChart
   ============================================ }
 { ******************************************** }
-{ Written By WalWalWalides                     }
-{ CopyRight © 2019                             }
-{ Email : WalWalWalides@gmail.com              }
-{ GitHub :https://github.com/walwalwalides     }
+{ Written By WalWalWalides }
+{ CopyRight © 2019 }
+{ Email : WalWalWalides@gmail.com }
+{ GitHub :https://github.com/walwalwalides }
 { ******************************************** }
 
 unit UMeteo;
@@ -24,7 +24,9 @@ type
     FPressure: integer;
     FObservable: IObservable;
     procedure TimerOnTimer(Sender: TObject);
+
   public
+
     constructor Create;
     destructor destroy; override;
     // IObservable
@@ -35,6 +37,9 @@ type
     function GetTemp: integer;
     function GetHumidity: integer;
     function GetPressure: integer;
+    function GetTimerInterval: integer;
+    procedure SetTimerInterval(const Value: integer);
+    property TimerInterval: integer read GetTimerInterval write SetTimerInterval;
   end;
 
 implementation
@@ -46,7 +51,6 @@ begin
   inherited;
   FObservable := TObservable.Create(Self);
   FTimer := TTimer.Create(Application);
-  //  FTimer.Interval := 2000;
   FTimer.OnTimer := TimerOnTimer;
   FTimer.Enabled := True;
 
@@ -73,6 +77,11 @@ begin
   Result := FTemp;
 end;
 
+function TMeteo.GetTimerInterval: integer;
+begin
+  Result := FTimer.Interval;
+end;
+
 procedure TMeteo.AddObserver(Obs: IObserver);
 begin
   FObservable.AddObserver(Obs);
@@ -89,17 +98,20 @@ begin
   FObservable.RemoveObserver(Obs);
 end;
 
+procedure TMeteo.SetTimerInterval(const Value: integer);
+begin
+  FTimer.Interval := Value;
+end;
+
 procedure TMeteo.TimerOnTimer(Sender: TObject);
 begin
-  //Meteo Simulation using timer
+  // MeteoChart Simulation using timer
   FTemp := 10 + random(20);
   FHumidity := 40 + random(40);
   FPressure := 1100 + random(100);
 
-//  Notify of Observers
+  // Notify of Observers
   FObservable.NotifyObservers;
 end;
 
 end.
-
- 
