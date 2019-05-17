@@ -1,12 +1,12 @@
 # clConverter
-- Convert Hex Color To Html                    
+- Convert HEX Color To HTML Color Code.                    
 ![](clConverter.png) 
 
 
 
 # Features  
-- Auto Convert Hex Color To Html. 
-- Auto Convert Html Color To Hex. 
+- Auto Convert HEX Color To HTML. 
+- Auto Convert HTML Color To HEX. 
 
 
 
