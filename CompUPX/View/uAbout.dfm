@@ -17,7 +17,7 @@ object frmAbout: TfrmAbout
   PixelsPerInch = 96
   TextHeight = 13
   object Logo: TImage
-    Left = 36
+    Left = 16
     Top = 10
     Width = 48
     Height = 48
