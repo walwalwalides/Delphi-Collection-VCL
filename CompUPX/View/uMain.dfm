@@ -251,14 +251,14 @@ object frmMain: TfrmMain
     Top = 232
   end
   object ilSmall: TImageList
-    Left = 328
-    Top = 120
+    Left = 272
+    Top = 128
   end
   object ilLarge: TImageList
     Height = 32
     Width = 32
-    Left = 384
-    Top = 232
+    Left = 280
+    Top = 208
     Bitmap = {
       494C010172007500040020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A003000001002000000000000040
