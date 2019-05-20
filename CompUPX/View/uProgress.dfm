@@ -4,7 +4,7 @@ object frmProgress: TfrmProgress
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'CompUPX'
-  ClientHeight = 206
+  ClientHeight = 203
   ClientWidth = 756
   Color = clBtnFace
   DoubleBuffered = True
@@ -20,21 +20,23 @@ object frmProgress: TfrmProgress
   object lblCurrentFolder: TLabel
     AlignWithMargins = True
     Left = 12
-    Top = 161
+    Top = 158
     Width = 741
     Height = 13
     Margins.Left = 12
     Align = alBottom
     Caption = 'lblCurrentFolder'
+    ExplicitTop = 161
     ExplicitWidth = 77
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 174
+    Top = 171
     Width = 756
     Height = 32
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 174
     object btnClose: TButton
       AlignWithMargins = True
       Left = 672
@@ -49,7 +51,6 @@ object frmProgress: TfrmProgress
       Default = True
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitTop = 3
     end
     object btnCancel: TButton
       AlignWithMargins = True
@@ -86,7 +87,7 @@ object frmProgress: TfrmProgress
     Left = 8
     Top = 3
     Width = 740
-    Height = 152
+    Height = 149
     Margins.Left = 8
     Margins.Right = 8
     Align = alClient
@@ -99,5 +100,6 @@ object frmProgress: TfrmProgress
     ScrollBars = ssBoth
     TabOrder = 1
     Zoom = 100
+    ExplicitHeight = 152
   end
 end

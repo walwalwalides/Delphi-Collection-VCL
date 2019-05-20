@@ -251,8 +251,8 @@ object frmMain: TfrmMain
     Top = 232
   end
   object ilSmall: TImageList
-    Left = 272
-    Top = 128
+    Left = 96
+    Top = 96
   end
   object ilLarge: TImageList
     Height = 32

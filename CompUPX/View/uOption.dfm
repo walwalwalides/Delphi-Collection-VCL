@@ -263,6 +263,6 @@ object frmOption: TfrmOption
   end
   object XPLook: TXPManifest
     Left = 144
-    Top = 128
+    Top = 88
   end
 end
