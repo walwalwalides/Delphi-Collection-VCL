@@ -1,0 +1,35 @@
+inherited Form5_NmXhdpiPh: TForm5_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited Button1: TButton
+    ModalResult = 1
+    Position.X = 152.000000000000000000
+    Position.Y = 296.000000000000000000
+    Text = #1042#1086#1081#1090#1080
+  end
+  inherited Label1: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 224.000000000000000000
+    Text = #1051#1086#1075#1080#1085
+  end
+  inherited Edit1: TEdit
+    Text = #1040#1089#1083#1072#1085#1073#1077#1082
+    Position.X = 16.000000000000000000
+    Position.Y = 256.000000000000000000
+    Size.Width = 361.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited Label2: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 72.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = #1051#1077#1085#1080#1074#1072#1103' '#1072#1074#1090#1086#1088#1080#1079#1072#1094#1080#1103
+  end
+end

@@ -68,8 +68,8 @@ object DMModule: TDMModule
     OnError = FDErrLogConnError
     AfterConnect = FDErrLogConnAfterConnect
     AfterDisconnect = FDErrLogConnAfterDisconnect
-    Left = 196
-    Top = 136
+    Left = 244
+    Top = 88
   end
   object FDErrLogQuery: TFDQuery
     Connection = FDErrLogConn

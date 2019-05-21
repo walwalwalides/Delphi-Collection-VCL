@@ -1,0 +1,7 @@
+inherited Form3_Windows: TForm3_Windows
+  BorderStyle = Single
+  Caption = 'Mobile Server'
+  ClientHeight = 130
+  ClientWidth = 483
+  DesignerMasterStyle = 0
+end

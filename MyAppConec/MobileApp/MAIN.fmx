@@ -1,0 +1,263 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'MyAppConec'
+  ClientHeight = 480
+  ClientWidth = 349
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormCreate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Position.X = 11.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = 'Name'
+  end
+  object WorkerNameEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 62.000000000000000000
+    Position.Y = 1.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    OnKeyDown = WorkerNameEditKeyDown
+  end
+  object Button1: TButton
+    Cursor = crHandPoint
+    ModalResult = 1
+    Position.X = 280.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Go'
+    OnClick = Button1Click
+  end
+  object Panel1: TPanel
+    Position.Y = 32.000000000000000000
+    Size.Width = 369.000000000000000000
+    Size.Height = 457.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        #1043#1086#1090#1086#1074)
+      Position.Y = 8.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object ComboBox2: TComboBox
+      Items.Strings = (
+        'No Information')
+      Position.Y = 200.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = ComboBox2Change
+      OnClick = ComboBox2Click
+    end
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.Y = 264.000000000000000000
+      Enabled = False
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label2: TLabel
+      StyledSettings = [Family]
+      Position.X = 197.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 141.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claRed
+      TextSettings.HorzAlign = Center
+      Text = 'Offline'
+    end
+    object Label3: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 1.000000000000000000
+      Position.Y = 49.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Position'
+    end
+    object Label4: TLabel
+      Position.X = 5.000000000000000000
+      Position.Y = 265.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Info'
+    end
+    object Label5: TLabel
+      Position.X = 4.000000000000000000
+      Position.Y = 184.000000000000000000
+      Text = 'Detail'
+    end
+    object Label6: TLabel
+      StyledSettings = [Family]
+      Position.X = 288.000000000000000000
+      Position.Y = 61.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claRed
+      TextSettings.HorzAlign = Center
+      Text = '00:00'
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Position.X = 1.000000000000000000
+      Position.Y = 286.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 161.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Viewport.Width = 349.000000000000000000
+      Viewport.Height = 157.000000000000000000
+    end
+    object DurationTimer: TTimer
+      OnTimer = DurationTimerTimer
+      Left = 176
+      Top = 280
+    end
+    object Button2: TButton
+      StyledSettings = [Family, FontColor]
+      Position.X = 253.000000000000000000
+      Position.Y = 171.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Action'
+      OnClick = Button2Click
+    end
+  end
+  object UpdateInfoTimer: TTimer
+    Enabled = False
+    OnTimer = UpdateInfoTimerTimer
+    Left = 232
+    Top = 264
+  end
+  object ServerConnection: TSQLConnection
+    ConnectionName = 'Test'
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=DataSnap'
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}')
+    Left = 160
+    Top = 192
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    SQLConnection = ServerConnection
+    Left = 160
+    Top = 216
+  end
+  object DriverStatusCDS: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DriverStatusDSP'
+    RemoteServer = DSProviderConnection1
+    Left = 152
+    Top = 208
+    object DriverStatusCDSid: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object DriverStatusCDSname: TWideStringField
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 50
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DriverStatusCDS
+    ScopeMappings = <>
+    Left = 312
+    Top = 384
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 132
+    Top = 141
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ComboBox1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'name'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ComboBox2
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'name'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object RideStatusCDS: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'RideStatusDSP'
+    RemoteServer = DSProviderConnection1
+    Left = 152
+    Top = 144
+    object RideStatusCDSid: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object RideStatusCDSname: TWideStringField
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 50
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = RideStatusCDS
+    ScopeMappings = <>
+    Left = 304
+    Top = 432
+  end
+end
