@@ -25,3 +25,8 @@
 |[MeteoChart](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MeteoChart)|Display As Many Graphics As Desired by the User with The Curves of Temperature, Humidity and Atmospheric Pressure|  
 | README.md | The readme for this project
 
+
+# If you want to Donate!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y79F36A9BGLHS&source=url)
+
