@@ -15,7 +15,7 @@
 |[CompUPX](https://github.com/walwalwalides/Delphi-Collection/tree/master/CompUPX)|Compression all executable files using UPX|
 |[CountDown](https://github.com/walwalwalides/Delphi-Collection/tree/master/CountDown)|How to construct a Timer that counts down from a certain number to indicate the beginning or end of an Event|
 |[CreEvent](https://github.com/walwalwalides/Delphi-Collection/tree/master/CreEvent)|How Create Stored Event in SQLite|
-|[NOTyMSG](https://github.com/walwalwalides/Delphi-Collection/tree/master/NOTyMSG])|How to create a custom notification in windows|
+|[NOTyMSG](https://github.com/walwalwalides/Delphi-Collection/tree/master/NOTyMSG)|How to create a custom notification in windows|
 |[RegisterKey](https://github.com/walwalwalides/Delphi-Collection/tree/master/RegisterKey)|Tools to create key in Registry |
 |[StudNote](https://github.com/walwalwalides/Delphi-Collection/tree/master/StudNote)|Save student grades and calculate the average|
 |[TraitExcept](https://github.com/walwalwalides/Delphi-Collection/tree/master/TraitExcept)|How to Define Custom Exceptions in Delphi|
