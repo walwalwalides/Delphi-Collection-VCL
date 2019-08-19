@@ -6,7 +6,7 @@
 # Features  
 
 - Insert Keys and Items into the Windows Registry
-- Auto generate regfile
+- Auto Generate Regfile
 
 
 ## Files
