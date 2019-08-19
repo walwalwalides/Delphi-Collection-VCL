@@ -36,4 +36,4 @@
 ## To Install the Software:
 
 ### Install TraitExcept 
-Download Link : https://github.com/walwalwalides/Delphi-Collection-VCL/releases/tag/TraitExcept
+Download Link : https://github.com/walwalwalides/Delphi-Collection-VCL/releases/download/TraitExcept/TraitExcept.7z
