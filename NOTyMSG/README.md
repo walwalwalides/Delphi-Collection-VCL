@@ -1,9 +1,9 @@
 # NOTyMSG
-- How to create a custom notification in windows.     
+- How to create a custom Notification in Windows.     
 ![](NOTyMSG_.png) 
 
 ## Built With
--Using only standard component
+- Using only standard Components.
 
 
 # Features  
