@@ -32,3 +32,10 @@
 | CountDown.dpk | The compiler project file |
 | CountDown.dproj | The MSBUILD project file |
 | README.md | The readme for this project |
+
+## To Install the Software:
+
+### Install CountDown 
+Download Link : https://github.com/walwalwalides/Delphi-Collection-VCL/releases/download/CountDown/CountDown.7z
+
+
