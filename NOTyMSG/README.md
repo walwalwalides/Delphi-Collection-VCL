@@ -31,7 +31,7 @@
 ## To Install the Software:
 
 ### Install NOTyMSG 
-Download Link : https://github.com/walwalwalides/Delphi-Collection-VCL/releases/download/NOTyMSG/NOTyMSG.7z
+Download Link : https://github.com/walwalwalides/Delphi-Collection-VCL/releases/download/NotyMSG/NotyMSG.7z
 
 
 
