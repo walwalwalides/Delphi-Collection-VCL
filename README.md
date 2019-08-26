@@ -8,7 +8,7 @@
 
 | File | Contents | 
 | --- | --- |
-| .gitignore | Git ignores the files in this file |
+| .gitignore | Git ignores the Files in this File |
 |[BatterflyTray](https://github.com/walwalwalides/Delphi-Collection/tree/master/BatterflyTray)|Create Animated Tray Icon|
 |[CheecKfont](https://github.com/walwalwalides/Delphi-Collection/tree/master/CheecKfont)|Check Installed Fonts Windows|
 |[CheeKtool](https://github.com/walwalwalides/Delphi-Collection/tree/master/CheeKtool)|Special Tools Used For Specific Task|
@@ -23,7 +23,7 @@
 |[clConverter](https://github.com/walwalwalides/Delphi-Collection/tree/master/clConverter)|Convert Hex Color To HTML Color Code|
 |[MyAlbumDLL](https://github.com/walwalwalides/Delphi-Collection/tree/master/MyAlbumDLL)|Load Image From a DLL Resource|
 |[MeteoChart](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MeteoChart)|Display As Many Graphics As Desired by the User with The Curves of Temperature, Humidity and Atmospheric Pressure|  
-| README.md | The readme for this project
+| README.md | The Readme for this Project
 
 ------
 
