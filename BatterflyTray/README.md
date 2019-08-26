@@ -9,7 +9,7 @@ Create Animated Tray Icon
 * [Graphics32](https://github.com/graphics32) - Graphics32
 
 # Features  
-- Generate animated images.
+- Generate Animated Images and Used as Tray Icon.
 
 
 
