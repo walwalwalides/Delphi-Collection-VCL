@@ -218,11 +218,11 @@ var
   Ycol: Integer;
   studentName: string;
 begin
-  if AddButton.Enabled then
-  begin
-    AddButtonClick(nil);
-    exit;
-  end;
+//  if AddButton.Enabled then
+//  begin
+//    AddButtonClick(nil);
+//    exit;
+//  end;
 
   Ycol := StringGrid.Selection.BottomRight.Y;
   if (Ycol > -1) then
@@ -430,8 +430,6 @@ var
   idiff: Integer;
 begin
   sIniDatei := TIniFile.Create(iniPath);
-  if (iactLine > StringGrid.RowCount) then
-    idiff := StringGrid.RowCount - iactLine;
 
   for i := 1 to StringGrid.RowCount do
   begin
@@ -448,14 +446,18 @@ begin
     end;
 
   end;
-
-  for i := StringGrid.RowCount to iactLine do
+  if (iactLine > StringGrid.RowCount) then
   Begin
-    sIniDatei.WriteString('Student n°' + i.ToString, 'Name', '');
-    sIniDatei.WriteString('Student n°' + i.ToString, 'Note1', '');
-    sIniDatei.WriteString('Student n°' + i.ToString, 'Note2', '');
-    sIniDatei.WriteString('Student n°' + i.ToString, 'Note3', '');
+    idiff := StringGrid.RowCount - iactLine;
 
+    for i := StringGrid.RowCount to iactLine do
+    Begin
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Name', '');
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note1', '');
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note2', '');
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note3', '');
+
+    End;
   End;
 
   sIniDatei.Free;
