@@ -62,8 +62,10 @@ type
     procedure N2Click(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnClick(Sender: TObject);
-    procedure StringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-    procedure StringGridMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure StringGridDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
+    procedure StringGridMouseMove(Sender: TObject; Shift: TShiftState;
+      X, Y: Integer);
     procedure I1Click(Sender: TObject);
     procedure BitBtnChartClick(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
@@ -102,7 +104,7 @@ uses
 var
   iniFolder, iniPath: String;
   Bitmap1, Bitmap2, Bitmap3: TBitmap;
-  LastRow, LastCol: Integer;
+  LastRow, LastCol, iactLine: Integer;
   AColLastCol, ARowLastRow: boolean;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -159,7 +161,8 @@ end;
 
 procedure TMainForm.AddButtonClick(Sender: TObject);
 begin
-  AddStudent(NameEdit.Text, StrToInt(FreEdit.Text), StrToInt(EngEdit.Text), StrToInt(MathEdit.Text));
+  AddStudent(NameEdit.Text, StrToInt(FreEdit.Text), StrToInt(EngEdit.Text),
+    StrToInt(MathEdit.Text));
   AddButton.Enabled := False;
 end;
 
@@ -194,7 +197,8 @@ end;
 
 function TMainForm.ADDpermisition: boolean;
 begin
-  result := ((Length(NameEdit.Text) > 0) and (Length(MathEdit.Text) > 0) and (Length(EngEdit.Text) > 0) and (Length(FreEdit.Text) > 0));
+  result := ((Length(NameEdit.Text) > 0) and (Length(MathEdit.Text) > 0) and
+    (Length(EngEdit.Text) > 0) and (Length(FreEdit.Text) > 0));
 end;
 
 procedure TMainForm.BitBtnChartClick(Sender: TObject);
@@ -285,7 +289,8 @@ begin
   end;
 end;
 
-procedure TMainForm.StringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TMainForm.StringGridDrawCell(Sender: TObject; ACol, ARow: Integer;
+  Rect: TRect; State: TGridDrawState);
 var
   AGrid: TStringGrid;
   CellLeftMargin, CellTopMargin: Integer;
@@ -300,14 +305,16 @@ begin
   else if gdSelected in State then // if is selected use the clAqua color
     AGrid.Canvas.Brush.Color := clAqua
   else
-    AGrid.Canvas.Brush.Color := clWindow; // if is not selected use the clwindow color
+    AGrid.Canvas.Brush.Color := clWindow;
+  // if is not selected use the clwindow color
 
   AGrid.Canvas.FillRect(Rect);
   AGrid.Canvas.TextOut(Rect.Left + 2, Rect.Top + 2, AGrid.Cells[ACol, ARow]);
 
 end;
 
-procedure TMainForm.StringGridMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+procedure TMainForm.StringGridMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: Integer);
 begin
 
   ShowCellHint(X, Y);
@@ -340,7 +347,7 @@ begin
   MathEdit.Clear;
   FreEdit.Clear;
   EngEdit.Clear;
-  
+
 end;
 
 procedure TMainForm.DoOutput(aArrIndex: Integer; aName: String);
@@ -397,12 +404,17 @@ begin
     StringGrid.Cells[1, aGridIndex] := IntToStr(fStudentArr[aArrIndex].iFre);
     StringGrid.Cells[2, aGridIndex] := IntToStr(fStudentArr[aArrIndex].iEng);
     StringGrid.Cells[3, aGridIndex] := IntToStr(fStudentArr[aArrIndex].iMath);
-    StringGrid.Cells[4, aGridIndex] := FormatFloat('0.00', fStudentArr[aArrIndex].iMoy);
+    StringGrid.Cells[4, aGridIndex] :=
+      FormatFloat('0.00', fStudentArr[aArrIndex].iMoy);
   end;
-  KorPanel.Caption := FormatFloat('0.00', fSumArr[0] / (StringGrid.RowCount - 1));
-  EngPanel.Caption := FormatFloat('0.00', fSumArr[1] / (StringGrid.RowCount - 1));
-  MathPanel.Caption := FormatFloat('0.00', fSumArr[2] / (StringGrid.RowCount - 1));
-  TotalPanel.Caption := FormatFloat('0.00', (fSumArr[0] + fSumArr[1] + fSumArr[2]) / ((StringGrid.RowCount - 1) * 3));
+  KorPanel.Caption := FormatFloat('0.00',
+    fSumArr[0] / (StringGrid.RowCount - 1));
+  EngPanel.Caption := FormatFloat('0.00',
+    fSumArr[1] / (StringGrid.RowCount - 1));
+  MathPanel.Caption := FormatFloat('0.00',
+    fSumArr[2] / (StringGrid.RowCount - 1));
+  TotalPanel.Caption := FormatFloat('0.00',
+    (fSumArr[0] + fSumArr[1] + fSumArr[2]) / ((StringGrid.RowCount - 1) * 3));
 
 end;
 
@@ -415,20 +427,36 @@ procedure TMainForm.writeIniDatei;
 var
   sIniDatei: TIniFile;
   i: Integer;
+  idiff: Integer;
 begin
   sIniDatei := TIniFile.Create(iniPath);
+  if (iactLine > StringGrid.RowCount) then
+    idiff := StringGrid.RowCount - iactLine;
 
   for i := 1 to StringGrid.RowCount do
   begin
     if (StringGrid.Cells[0, i] <> '') then
     begin
-      sIniDatei.WriteString('Student n°' + i.ToString, 'Name', StringGrid.Cells[0, i]);
-      sIniDatei.WriteString('Student n°' + i.ToString, 'Note1', StringGrid.Cells[1, i]);
-      sIniDatei.WriteString('Student n°' + i.ToString, 'Note2', StringGrid.Cells[2, i]);
-      sIniDatei.WriteString('Student n°' + i.ToString, 'Note3', StringGrid.Cells[3, i]);
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Name',
+        StringGrid.Cells[0, i]);
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note1',
+        StringGrid.Cells[1, i]);
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note2',
+        StringGrid.Cells[2, i]);
+      sIniDatei.WriteString('Student n°' + i.ToString, 'Note3',
+        StringGrid.Cells[3, i]);
     end;
 
   end;
+
+  for i := StringGrid.RowCount to iactLine do
+  Begin
+    sIniDatei.WriteString('Student n°' + i.ToString, 'Name', '');
+    sIniDatei.WriteString('Student n°' + i.ToString, 'Note1', '');
+    sIniDatei.WriteString('Student n°' + i.ToString, 'Note2', '');
+    sIniDatei.WriteString('Student n°' + i.ToString, 'Note3', '');
+
+  End;
 
   sIniDatei.Free;
 end;
@@ -466,10 +494,14 @@ begin
     ANote1 := sIniDatei.ReadString('Student n°' + i.ToString, 'Note1', '');
     ANote2 := sIniDatei.ReadString('Student n°' + i.ToString, 'Note2', '');
     ANote3 := sIniDatei.ReadString('Student n°' + i.ToString, 'Note3', '');
-    if ((Astudent <> '') and (ANote1 <> '') and (ANote2 <> '') and (ANote3 <> '')) then
-      AddStudent(Astudent, StrToInt(ANote1), StrToInt(ANote2), StrToInt(ANote3));
+    if ((Astudent <> '') and (ANote1 <> '') and (ANote2 <> '') and
+      (ANote3 <> '')) then
+      AddStudent(Astudent, StrToInt(ANote1), StrToInt(ANote2),
+        StrToInt(ANote3));
+
   end;
 
+  iactLine := iline;
   sIniDatei.Free;
 end;
 

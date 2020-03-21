@@ -214,7 +214,6 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
-    ExplicitLeft = 8
     object AddButton: TBitBtn
       AlignWithMargins = True
       Left = 5
@@ -266,9 +265,6 @@ object MainForm: TMainForm
       ShowHint = True
       TabOrder = 0
       OnClick = AddButtonClick
-      ExplicitLeft = -1
-      ExplicitTop = 14
-      ExplicitHeight = 36
     end
     object DelButton: TBitBtn
       AlignWithMargins = True
@@ -321,8 +317,6 @@ object MainForm: TMainForm
       ShowHint = True
       TabOrder = 1
       OnClick = DelButtonClick
-      ExplicitLeft = 86
-      ExplicitTop = 20
     end
     object BitBtnChart: TBitBtn
       AlignWithMargins = True
@@ -375,8 +369,6 @@ object MainForm: TMainForm
       ShowHint = True
       TabOrder = 2
       OnClick = BitBtnChartClick
-      ExplicitLeft = 548
-      ExplicitTop = 20
     end
     object BitBtnEdit: TBitBtn
       AlignWithMargins = True
@@ -429,7 +421,6 @@ object MainForm: TMainForm
       ShowHint = True
       TabOrder = 3
       OnClick = BitBtnEditClick
-      ExplicitTop = 20
     end
   end
   object MainMenu: TMainMenu
