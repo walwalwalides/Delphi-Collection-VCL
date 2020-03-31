@@ -1,9 +1,9 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{BAEB8443-3FC3-4BDF-AFD3-4403B6492721}</ProjectGuid>
+        <ProjectGuid>{BDEEE47C-52F8-4580-B3C9-571BD69F287C}</ProjectGuid>
         <ProjectVersion>18.7</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
-        <MainSource>CheecKtool.dpr</MainSource>
+        <MainSource>LoadUrlGif.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -46,9 +46,6 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <SanitizedProjectName>CheecKtool</SanitizedProjectName>
-        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
@@ -56,22 +53,23 @@
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <SanitizedProjectName>LoadUrlGif</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;RestDatawareCORE;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;JDLibComponents;JvPluginSystem;rtcSDK;tmswizdXE12;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;HTLabelPackage;NxCollection6Dsgn_d10_2;OrpheusDR;FireDACMSSQLDriver;dwUrlaub;vcltouch;JvBands;vcldb;lmdrtchartdb;svn;dxPSTeeChartRS26;JvJans;dxGDIPlusRS26;JvDotNetCtrls;dxPSdxFCLnkRS26;lmdrtdialog;vclib;lmdrttools;dxCloudServiceLibraryRS26;frxTee26;lmdrtrtf;NxDBGrid6Run_d10_2;NxCollection6Run_d10_2;vclZipForged25;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPsPrVwAdvRS26;dxPDFViewerRS26;RESTDWDriverFD;vclx;lmdrtelpro;dxPScxTLLnkRS26;lmdrtide;unidac260;EsVclCore;FrameStandPackage_10_3;Instructor;RESTDWDriverUNIDAC;RESTBackendComponents;VCLRESTComponents;fsTee26;NxLayout6Run_d10_2;vclie;bindengine;CloudService;dxmdsRS26;JvHMI;FireDACMySQLDriver;fsIBX26;dxdborRS26;frx26;DataSnapClient;rtcSDK_DBA;dxFireDACServerModeRS26;bindcompdbx;DBXSybaseASEDriver;IndyIPServer;cxPivotGridRS26;IndySystem;fsADO26;frxDBX26;cxTreeListdxBarPopupMenuRS26;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;VirtualTreesR;cxSchedulerRibbonStyleEventEditorRS26;dxPSCoreRS26;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;lmdrtchart;dxSpreadSheetRS26;dxBarExtItemsRS26;dxPSdxGaugeControlLnkRS26;YxdUI;lmdrttxt;emshosting;Jcl;tmsdXE12;qrBarcodePkg;DBXOdbcDriver;FireDACTDataDriver;crcontrols260;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;dxFlowChartAdvancedCustomizeFormRS26;FIBPlus_D26;JvManagedThreads;FMXTee;dxDockingRS26;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;cxLibraryRS26;JvTimeFramework;rtl;emsserverresource;DbxClientDriver;DclJDLibComponents;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;dxSpreadSheetConditionalFormattingDialogsRS26;JvSystem;lmdrtprint;JvStdCtrls;appanalytics;lmdrtdocking;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;IndyIPClient;bindcompvcl;lmdrtsyntax;dxFlowChartLayoutsRS26;TeeUI;dxADOEMFRS26;JvDocking;JvPascalInterpreter;VclSmp;TMSFMXPackPkgDXE12;lmdrttxtdb;FireDACODBCDriver;dxRibbonRS26;DataSnapIndy10ServerTransport;dxPScxCommonRS26;JclVcl;dxRichEditDocumentModelRS26;MHLComponents;DataSnapProviderClient;FireDACMongoDBDriver;dxFlowChartDesignerRS26;JvControls;dxPScxGridLnkRS26;JvPrintPreview;lmdrtshell;lmdrtstorage;dxSpreadSheetCoreRS26;DamPackage;DataSnapServerMidas;RESTComponents;lmdrtweb;lmdrtsearch;ZComponent;DBXInterBaseDriver;dxPScxExtCommonRS26;ZCore;emsclientfiredac;dacfmx260;DataSnapFireDAC;svnui;lmdrtl;JvGlobus;dclZipForged25;DBXMSSQLDriver;JvMM;dxRichEditControlRS26;DatasnapConnectorsFreePascal;dxGaugeControlRS26;lmdrtbar;dxorgcRS26;dxPScxVGridLnkRS26;DWhtmlEditor;bindcompfmx;JvNet;DBXOracleDriver;inetdb;JvAppFrm;RaizeComponentsVcl;dxDBXServerModeRS26;dxBarDBNavRS26;FmxTeeUI;emsedge;RaizeComponentsVclDb;FireDACIBDriver;fmx;fmxdae;dxServerModeRS26;dxWizardControlRS26;vquery260;JvWizards;dacvcl260;dxTabbedMDIRS26;fs26;dxEMFRS26;dbexpress;IndyCore;lmdrtdesign;dxComnRS26;NxLayout6Dsgn_d10_2;frxIntIO26;NxGrid6Run_d10_2;JvPageComps;dsnap;DataSnapCommon;emsclient;lmdrtrtlx;FireDACCommon;OrpheusDBDR;JvDB;JDGitHubComponents;ZParseSql;frxcs26;lmdrtelcore;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;soapserver;cxPivotGridOLAPRS26;JclDeveloperTools;cxVerticalGridRS26;lmdrtinspector;lmdrtfx;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;dxPSdxLCLnkRS26;DBXFirebirdDriver;EsVclComponents;JvCmp;lmdrtsearchdb;NxInspector6Run_d10_2;FireDACCommonODBC;FireDACCommonDriver;IpWorkZip;dxMapControlRS26;NxInspector6Dsgn_d10_2;frxIntIOIndy26;inet;dxSpellCheckerRS26;IndyIPCommon;JvCustom;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;JvXPCtrls;frxDB26;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;lmdrtsys;dxPScxPCProdRS26;NxGrid6Dsgn_d10_2;tmsxlsdXE12;dxNavBarRS26;dxCoreRS26;fsDB26;cxExportRS26;unidacvcl260;FireDAC;dxHttpIndyRequestRS26;TeeDB;dxPSPrVwRibbonRS26;JvCore;NxStandard6Dsgn_d10_2;frxe26;ZDbc;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;frxIBX26;JvDlgs;JvRuntimeDesign;ArabicTreeVeiw_D7;dxPSDBTeeChartRS26;ibxpress;Tee;DataSnapServer;ibxbindings;dxPSdxDBTVLnkRS26;dac260;vclwinx;FireDACDSDriver;lmdrtrtfdb;frxADO26;tmsexdXE12;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;RESTDWDriverZEOS;bindcomp;ZPlain;dxPSdxOCLnkRS26;DBXInformixDriver;Package;frce;SynEdit_R;acntDX10Rio_R;NxStandard6Run_d10_2;dbxcds;KernowSoftwareFMX;adortl;NxDBGrid6Dsgn_d10_2;unidacfmx260;dxSpreadSheetCoreDialogsRS26;dxBarExtDBItemsRS26;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;dxPSdxPDFViewerLnkRS26;dxRichEditInplaceRS26;HGMComponents;NewAC_XE10;lmdrtcore;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>FileVersion=1.0.0.0;ProductVersion=1.0.0.0;Comments=ServerTools383;InternalName=ServerTools383;LegalCopyright=2019, 383 ServerTools, All Rights Reserved;CompanyName=By Star&amp;&amp;RainBow;ProductName=$(MSBuildProjectName);FileDescription=Server Tools 383;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
-        <DCC_UsePackage>NxStandard6Dsgn_dxe6;CRFInputControlRun;DBXSqliteDriver;fmx;IndySystem;TeeDB;tethering;NxLayout6Run_dxe6;inetdbbde;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;NxInspectorDsgn_dxe6;NxInspectorRun_dxe6;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;NxCommonDsgn_dxe6;vcldb;NxStandard6Run_dxe6;vcldsnap;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;NxDBGrid6Run_dxe6;DBXMSSQLDriver;IndyIPCommon;CloudService;CodeSiteExpressPkg;NxInspector6Run_dxe6;FmxTeeUI;soapserver;NxCollectionDsgn_dxe6;inetdbxpress;NxDBGridRun_dxe6;dsnapxml;adortl;NxSheetRun_dxe6;bindcompfmx;vcldbx;RESTBackendComponents;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;Tee;DBXOdbcDriver;NxGrid6Run_dxe6;xmlrtl;DataSnapNativeClient;svnui;NxGridDsgn_dxe6;IndyProtocols;DBXMySQLDriver;NxDBGrid6Dsgn_dxe6;soaprtl;vclactnband;bindengine;bindcompdbx;FMXTee;TeeUI;bindcompvcl;NxCompanion6Dsgn_dxe6;MrComponents;vclie;NxCollectionRun_dxe6;vcltouch;NxDBGridDsgn_dxe6;NxInspector6Dsgn_dxe6;VclSmp;VCLRESTComponents;DBXInformixDriver;icStandardRun;DataSnapConnectors;NxCommonRun_dxe6;DataSnapServerMidas;NxCompanion6Run_dxe6;dsnapcon;DBXFirebirdDriver;NxGridRun_dxe6;inet;fmxobj;soapmidas;vclx;svn;DBXSybaseASADriver;fmxdae;RESTComponents;bdertl;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>NxStandard6Dsgn_dxe6;DBXSqliteDriver;fmx;IndySystem;TeeDB;tethering;NxLayout6Run_dxe6;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;NxInspectorDsgn_dxe6;NxInspectorRun_dxe6;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;NxCommonDsgn_dxe6;vcldb;NxStandard6Run_dxe6;vcldsnap;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;NxDBGrid6Run_dxe6;DBXMSSQLDriver;IndyIPCommon;CloudService;NxInspector6Run_dxe6;FmxTeeUI;soapserver;NxCollectionDsgn_dxe6;inetdbxpress;NxDBGridRun_dxe6;dsnapxml;adortl;NxSheetRun_dxe6;bindcompfmx;RESTBackendComponents;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;Tee;DBXOdbcDriver;NxGrid6Run_dxe6;xmlrtl;DataSnapNativeClient;NxGridDsgn_dxe6;IndyProtocols;DBXMySQLDriver;NxDBGrid6Dsgn_dxe6;soaprtl;vclactnband;bindengine;bindcompdbx;FMXTee;TeeUI;bindcompvcl;NxCompanion6Dsgn_dxe6;MrComponents;vclie;NxCollectionRun_dxe6;vcltouch;NxDBGridDsgn_dxe6;NxInspector6Dsgn_dxe6;VclSmp;VCLRESTComponents;DBXInformixDriver;DataSnapConnectors;NxCommonRun_dxe6;DataSnapServerMidas;NxCompanion6Run_dxe6;dsnapcon;DBXFirebirdDriver;NxGridRun_dxe6;inet;fmxobj;soapmidas;vclx;DBXSybaseASADriver;fmxdae;RESTComponents;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;RestDatawareCORE;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;JDLibComponents;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;OrpheusDR;FireDACMSSQLDriver;vcltouch;vcldb;dxPSTeeChartRS26;dxGDIPlusRS26;dxPSdxFCLnkRS26;vclib;dxCloudServiceLibraryRS26;NxDBGrid6Run_d10_2;NxCollection6Run_d10_2;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPsPrVwAdvRS26;dxPDFViewerRS26;RESTDWDriverFD;vclx;dxPScxTLLnkRS26;FrameStandPackage_10_3;RESTDWDriverUNIDAC;RESTBackendComponents;VCLRESTComponents;NxLayout6Run_d10_2;vclie;bindengine;CloudService;dxmdsRS26;FireDACMySQLDriver;dxdborRS26;DataSnapClient;dxFireDACServerModeRS26;bindcompdbx;DBXSybaseASEDriver;IndyIPServer;cxPivotGridRS26;IndySystem;cxTreeListdxBarPopupMenuRS26;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;VirtualTreesR;cxSchedulerRibbonStyleEventEditorRS26;dxPSCoreRS26;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;dxSpreadSheetRS26;dxBarExtItemsRS26;dxPSdxGaugeControlLnkRS26;emshosting;Jcl;tmsdXE12;DBXOdbcDriver;FireDACTDataDriver;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;dxFlowChartAdvancedCustomizeFormRS26;FIBPlus_D26;FMXTee;dxDockingRS26;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;cxLibraryRS26;rtl;emsserverresource;DbxClientDriver;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;dxSpreadSheetConditionalFormattingDialogsRS26;appanalytics;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;IndyIPClient;bindcompvcl;dxFlowChartLayoutsRS26;TeeUI;dxADOEMFRS26;VclSmp;FireDACODBCDriver;dxRibbonRS26;DataSnapIndy10ServerTransport;dxPScxCommonRS26;dxRichEditDocumentModelRS26;DataSnapProviderClient;FireDACMongoDBDriver;dxFlowChartDesignerRS26;dxPScxGridLnkRS26;dxSpreadSheetCoreRS26;DataSnapServerMidas;RESTComponents;ZComponent;DBXInterBaseDriver;dxPScxExtCommonRS26;ZCore;emsclientfiredac;DataSnapFireDAC;DBXMSSQLDriver;dxRichEditControlRS26;DatasnapConnectorsFreePascal;dxGaugeControlRS26;dxorgcRS26;dxPScxVGridLnkRS26;DWhtmlEditor;bindcompfmx;DBXOracleDriver;inetdb;dxDBXServerModeRS26;dxBarDBNavRS26;FmxTeeUI;emsedge;FireDACIBDriver;fmx;fmxdae;dxServerModeRS26;dxWizardControlRS26;dxTabbedMDIRS26;dxEMFRS26;dbexpress;IndyCore;dxComnRS26;NxGrid6Run_d10_2;dsnap;DataSnapCommon;emsclient;FireDACCommon;OrpheusDBDR;ZParseSql;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;soapserver;cxPivotGridOLAPRS26;cxVerticalGridRS26;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;dxPSdxLCLnkRS26;DBXFirebirdDriver;NxInspector6Run_d10_2;FireDACCommonODBC;FireDACCommonDriver;dxMapControlRS26;inet;dxSpellCheckerRS26;IndyIPCommon;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;dxPScxPCProdRS26;dxNavBarRS26;dxCoreRS26;cxExportRS26;FireDAC;dxHttpIndyRequestRS26;TeeDB;dxPSPrVwRibbonRS26;ZDbc;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;dxPSDBTeeChartRS26;ibxpress;Tee;DataSnapServer;ibxbindings;dxPSdxDBTVLnkRS26;vclwinx;FireDACDSDriver;tmsexdXE12;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;bindcomp;ZPlain;dxPSdxOCLnkRS26;DBXInformixDriver;SynEdit_R;NxStandard6Run_d10_2;dbxcds;adortl;dxSpreadSheetCoreDialogsRS26;dxBarExtDBItemsRS26;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;dxPSdxPDFViewerLnkRS26;dxRichEditInplaceRS26;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -82,14 +80,12 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <Icon_MainIcon>CheeckTool_Icon.ico</Icon_MainIcon>
-        <DCC_DcuOutput>DCU</DCC_DcuOutput>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
-        <DCC_ExeOutput>Bin</DCC_ExeOutput>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <BT_BuildType>Debug</BT_BuildType>
+        <Icon_MainIcon>LoadUrlGif_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -98,23 +94,24 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <Icon_MainIcon>ST383_Icon.ico</Icon_MainIcon>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_DcuOutput>DCU</DCC_DcuOutput>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <DCC_ExeOutput>C:\ProgIDE\Projekt\Software Projekt\Delphi\383_Server\383Server\SS383Install\Server383\</DCC_ExeOutput>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="MainTools.pas">
-            <Form>frmMainTools</Form>
+        <DCCReference Include="Main.pas">
+            <Form>frmMain</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Unit\ToolLib.pas"/>
-        <DCCReference Include="Form\untSplash.pas">
+        <DCCReference Include="View\untSplash.pas">
             <Form>frmSplash</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\About.pas">
+            <Form>frmAbout</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -130,21 +127,23 @@
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Delphi.Personality.12</Borland.Personality>
-        <Borland.ProjectType/>
+        <Borland.ProjectType>Application</Borland.ProjectType>
         <BorlandProject>
             <Delphi.Personality>
-                <Source>
-                    <Source Name="MainSource">CheecKtool.dpr</Source>
-                </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclBindCompFireDAC240.bpl">LiveBinding-Ausdruckskomponenten für FireDac</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclbindcompdbx240.bpl">LiveBindings-Ausdruckskomponenten - DbExpress</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Beispiele für gekapselte Komponenten für Automation Server</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\RvDesign110.bpl">Datei C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\RvDesign110.bpl nicht gefunden</Excluded_Packages>
+                    <Excluded_Packages Name="C:\ProgIDE\Komponenten\ComponentAce\ZipForge\Lib\Delphi 10.3 and C++ Builder 10.3 (Rio)\dclZipForged26.bpl">Datei C:\ProgIDE\Komponenten\ComponentAce\ZipForge\Lib\Delphi 10.3 and C++ Builder 10.3 (Rio)\dclZipForged26.bpl nicht gefunden</Excluded_Packages>
                 </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">LoadUrlGif.dpr</Source>
+                </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Bin\CheecKtool.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\LoadUrlGif.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>CheeckTool.exe</RemoteName>
+                        <RemoteName>LoadUrlGif.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -424,29 +423,7 @@
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="iPad_Launch1024">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
                 <DeployClass Name="iPad_Launch1024x768">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="iPad_Launch1536">
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
                     </Platform>
@@ -480,17 +457,6 @@
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="iPad_Launch1668x2388">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="iPad_Launch2048">
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
                     </Platform>
@@ -546,17 +512,6 @@
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="iPad_Launch2732x2048">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="iPad_Launch768">
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
                     </Platform>
