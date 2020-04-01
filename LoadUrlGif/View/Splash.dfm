@@ -59,8 +59,7 @@ object frmSplash: TfrmSplash
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 409
-    ExplicitTop = 212
+    ExplicitLeft = 400
     ExplicitWidth = 22
   end
   object bvlcontour: TBevel

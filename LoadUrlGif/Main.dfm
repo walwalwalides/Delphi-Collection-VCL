@@ -2,9 +2,11 @@ object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = 'LoadGifUrl'
-  ClientHeight = 511
-  ClientWidth = 599
+  ClientHeight = 591
+  ClientWidth = 684
   Color = clBtnFace
+  Constraints.MinHeight = 650
+  Constraints.MinWidth = 700
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -13,45 +15,64 @@ object frmMain: TfrmMain
   Menu = MainMenu
   OldCreateOrder = False
   OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object imgGIFAnimator: TImage
     AlignWithMargins = True
-    Left = 3
+    Left = 92
     Top = 30
-    Width = 593
-    Height = 387
-    Align = alTop
+    Width = 500
+    Height = 342
     AutoSize = True
     Transparent = True
-    ExplicitLeft = 8
+  end
+  object lblAnimationSpeed: TLabel
+    AlignWithMargins = True
+    Left = 6
+    Top = 463
+    Width = 672
+    Height = 13
+    Margins.Left = 6
+    Margins.Right = 6
+    Align = alBottom
+    Alignment = taCenter
+    Caption = 'Animation Speed'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitLeft = 3
+    ExplicitWidth = 96
   end
   object edtUrlLink: TEdit
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 593
+    Width = 678
     Height = 21
     Align = alTop
     TabOrder = 0
     Text = 
       'https://raw.githubusercontent.com/walwalwalides/Delphi-Collectio' +
       'n-Component/master/Contact%20Library/View/ContactImagePanel.gif'
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 449
+    ExplicitWidth = 593
   end
   object pnlBottom: TPanel
     AlignWithMargins = True
     Left = 3
-    Top = 438
-    Width = 593
+    Top = 518
+    Width = 678
     Height = 70
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 423
+    ExplicitTop = 438
+    ExplicitWidth = 593
     object btnPStop: TButton
-      Left = 236
+      Left = 278
       Top = 24
       Width = 121
       Height = 33
@@ -65,22 +86,22 @@ object frmMain: TfrmMain
   object TraBarGifAnimator: TTrackBar
     AlignWithMargins = True
     Left = 3
-    Top = 399
-    Width = 593
+    Top = 479
+    Width = 678
     Height = 33
     Align = alBottom
     Max = 1000
     TabOrder = 2
-    ExplicitLeft = -2
-    ExplicitTop = 336
+    ExplicitLeft = -21
+    ExplicitTop = 452
   end
   object NetHTTPRequest1: TNetHTTPRequest
     Asynchronous = False
     ConnectionTimeout = 60000
     ResponseTimeout = 60000
     Client = NetHTTPClient1
-    Left = 56
-    Top = 256
+    Left = 65528
+    Top = 328
   end
   object NetHTTPClient1: TNetHTTPClient
     Asynchronous = False
@@ -89,12 +110,11 @@ object frmMain: TfrmMain
     HandleRedirects = True
     AllowCookies = True
     UserAgent = 'Embarcadero URI Client/1.0'
-    Left = 56
-    Top = 192
+    Top = 368
   end
   object imgLstMain: TImageList
-    Left = 48
-    Top = 304
+    Left = 8
+    Top = 288
     Bitmap = {
       494C010102000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010

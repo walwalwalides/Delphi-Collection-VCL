@@ -2,8 +2,10 @@ program LoadUrlGif;
 
 uses
   Vcl.Forms,
-  Main in 'Main.pas' {frmMain},
-  untSplash in 'View\untSplash.pas' {frmSplash},
+  Vcl.Themes,
+  Vcl.Styles,
+  Main in 'Main.pas' {frmMain} ,
+  Splash in 'View\Splash.pas' {frmSplash} ,
   About in 'View\About.pas' {frmAbout};
 
 {$R *.res}
@@ -22,4 +24,5 @@ begin
     frmSplash.Free;
   end;
   Application.Run;
+
 end.

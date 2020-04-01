@@ -36,10 +36,13 @@ type
     N2: TMenuItem;
     A1: TMenuItem;
     I1: TMenuItem;
+    lblAnimationSpeed: TLabel;
     procedure btnPStopClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure I1Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -49,10 +52,11 @@ type
 var
   frmMain: TfrmMain;
   GifState: TGIfState;
+  iWidthGif: integer = 600;
 
 implementation
 
-uses Vcl.Imaging.GIFImg,About;
+uses Vcl.Imaging.GIFImg, About;
 
 {$R *.dfm}
 
@@ -60,8 +64,10 @@ procedure TfrmMain.btnPStopClick(Sender: TObject);
 var
   gifStrm: TMemoryStream;
 begin
+
   if (GifState = gsPlay) then
   begin
+    imgGIFAnimator.Left := (self.Width - iWidthGif) div 2;
     Screen.Cursor := crHourGlass;
     GifState := gsStop;
     btnPStop.Caption := 'Stop';
@@ -94,25 +100,46 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   self.position := poMainFormCenter;
+  self.WindowState := wsMaximized;
+  self.Padding.Left := 3;
+  self.Padding.Top := 3;
+  imgGIFAnimator.AutoSize := True;
   edtUrlLink.Font.Size := 8;
   GifState := gsPlay;
   btnPStop.Cursor := crHandPoint;
   Screen.Cursor := crDefault;
   self.DoubleBuffered := True;
-   TraBarGifAnimator.position:=500;
-   self.Color:=clgray;
+  TraBarGifAnimator.position := 500;
+  self.Color := clgray;
+  imgGIFAnimator.Left := 0;
+  imgGIFAnimator.Top := 60;
+  imgGIFAnimator.Width := 600;
+  lblAnimationSpeed.Font.Color:=clGreen;
+
+end;
+
+procedure TfrmMain.FormResize(Sender: TObject);
+begin
+  //
+  btnPStop.Left := (self.Width - btnPStop.Width) div 2;
+  imgGIFAnimator.Left := (self.Width - imgGIFAnimator.Width) div 2;
+end;
+
+procedure TfrmMain.FormShow(Sender: TObject);
+begin
+  //
 end;
 
 procedure TfrmMain.I1Click(Sender: TObject);
 begin
 
-frmAbout.Show;
+  frmAbout.Show;
 
 end;
 
 procedure TfrmMain.N2Click(Sender: TObject);
 begin
- Application.Terminate;
+  Application.Terminate;
 end;
 
 end.

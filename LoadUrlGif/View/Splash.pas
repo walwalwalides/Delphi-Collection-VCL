@@ -6,7 +6,7 @@
 { CopyRight © 2020 }
 { Email : WalWalWalides@gmail.com }
 { ******************************************** }
-unit untSplash;
+unit Splash;
 
 interface
 
@@ -53,7 +53,7 @@ begin
   lblSplash.font.Color := clGreen;
   lblSoftVer.font.Color := clGreen;
   self.Color:=clGray;
-  TimerSplash.Interval:=700;
+  TimerSplash.Interval:=500;
 end;
 
 procedure TfrmSplash.FormShow(Sender: TObject);
