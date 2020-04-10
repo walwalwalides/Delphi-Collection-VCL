@@ -3,6 +3,14 @@
 ![](Delphi-Collection.jpg)
 **Authors:**  *WalWalWalides*
 ------
+![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
+![GitHub](https://img.shields.io/github/license/walwalwalides/Delphi-Collection-Component)
+
+
+![Platform](https://img.shields.io/badge/delphi->%3D_2010-glue)
+![GitHub last commit](https://img.shields.io/github/last-commit/walwalwalides/Delphi-Collection-Component)
+
+[![GitHub stars](https://img.shields.io/github/stars/walwalwalides/Delphi-Collection-Component)](https://github.com/walwalwalides/Delphi-Collection-Component/stargazers)
 
 ## Contains
 
