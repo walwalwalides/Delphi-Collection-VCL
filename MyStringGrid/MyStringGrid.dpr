@@ -8,7 +8,8 @@ uses
   SetupPrinter in 'SetupPrinter.pas' {frmSetupPrinter},
   Module in 'Module\Module.pas' {DMModule: TDataModule},
   uIConnection in 'Api\uIConnection.pas',
-  uTConnection in 'Implimentation\uTConnection.pas';
+  uTConnection in 'Implimentation\uTConnection.pas',
+  About in 'About\About.pas' {frmAbout};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.title:='MyStringGrid';
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmAbout, frmAbout);
   Application.Run;
 end.

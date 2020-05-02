@@ -121,6 +121,10 @@
         </DCCReference>
         <DCCReference Include="Api\uIConnection.pas"/>
         <DCCReference Include="Implimentation\uTConnection.pas"/>
+        <DCCReference Include="About\About.pas">
+            <Form>frmAbout</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

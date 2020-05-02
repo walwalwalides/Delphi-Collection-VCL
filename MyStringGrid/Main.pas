@@ -15,7 +15,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls, uStringGrid,
-  uTConnection;
+  uTConnection, Vcl.Menus;
 
 type
   TfrmMain = class(TForm)
@@ -26,6 +26,11 @@ type
     btnJSON: TButton;
     btnPrint: TButton;
     btnPDF: TButton;
+    MainMenu: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    A1: TMenuItem;
+    I1: TMenuItem;
     procedure btnUpdateDBClick(Sender: TObject);
     procedure btnInsertClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -36,6 +41,8 @@ type
     procedure StrGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
       State: TGridDrawState);
     procedure FormShow(Sender: TObject);
+    procedure I1Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
   private
     FConnection: TConnection;
     { Private-Deklarationen }
@@ -50,7 +57,7 @@ var
 implementation
 
 uses
-  SetupPrinter, Module;
+  SetupPrinter, Module, About;
 
 {$R *.dfm}
 
@@ -70,7 +77,7 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   self.Position := poMainFormCenter;
-  self.caption :=Application.title ;
+  self.caption := Application.title;
   StrGrid.RowCount := 11;
   StrGrid.ColCount := 5;
 
@@ -88,6 +95,29 @@ procedure TfrmMain.FormShow(Sender: TObject);
 begin
   StrGrid.Connection := FConnection.getconnection;
   StrGrid.SQLText := FConnection.GetSQL;
+end;
+
+procedure TfrmMain.I1Click(Sender: TObject);
+var
+  FAbout: TfrmAbout;
+begin
+  FAbout := nil;
+  FAbout.free;
+
+  if not assigned(FAbout) then
+  Begin
+    FAbout := TfrmAbout.create(nil);
+    try
+      FAbout.show;
+    finally
+
+    end;
+  end;
+end;
+
+procedure TfrmMain.N2Click(Sender: TObject);
+begin
+  Application.terminate;
 end;
 
 procedure TfrmMain.StrGridDrawCell(Sender: TObject; ACol, ARow: Integer;
@@ -137,21 +167,21 @@ procedure TfrmMain.btnPrintClick(Sender: TObject);
 var
   FSetupPrinter: TfrmSetupPrinter;
 begin
-  FSetupPrinter:=nil;
+  FSetupPrinter := nil;
   FSetupPrinter.free;
 
   if not assigned(FSetupPrinter) then
   Begin
-      FSetupPrinter := TfrmSetupPrinter.create(nil);
+    FSetupPrinter := TfrmSetupPrinter.create(nil);
     try
 
-      if (fSetupPrinter.ShowModal = mrok) then
+      if (FSetupPrinter.ShowModal = mrok) then
       Begin
-        case fSetupPrinter.PrintSize of
+        case FSetupPrinter.PrintSize of
           1:
-            StrGrid.print(0, 0, -1, -1, -1, -1, 1, fSetupPrinter.PrintColor);
+            StrGrid.print(0, 0, -1, -1, -1, -1, 1, FSetupPrinter.PrintColor);
           2:
-            StrGrid.print(0, 0, -1, -1, -1, -1, 0.5, fSetupPrinter.PrintColor);
+            StrGrid.print(0, 0, -1, -1, -1, -1, 0.5, FSetupPrinter.PrintColor);
 
         end;
 
