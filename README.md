@@ -32,7 +32,7 @@
 |[MyAlbumDLL](https://github.com/walwalwalides/Delphi-Collection/tree/master/MyAlbumDLL)|Load Image From a DLL Resource|
 |[MeteoChart](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MeteoChart)|Display as Many Graphics as Desired by the User with The Curves of Temperature, Humidity and Atmospheric Pressure|  
 |[LoadUrlGif](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/LoadUrlGif)|Load Gif From URL|
-|[LoadUrlGif](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MyStringGrid)|Export StringGrid to different File Formats|
+|[MyStringGrid](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MyStringGrid)|Export StringGrid to different File Formats|
 | README.md | The Readme for this Project
 
 ------
