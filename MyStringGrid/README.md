@@ -5,7 +5,7 @@
 
 # Features  
 
-- Export to PDF or CSV.
+- Export to PDF,CSV or JSON.
 - Printing using windows API.
 - choosing the best parametrization by printing.
 
@@ -27,3 +27,9 @@
 | MyStringGrid.dpk | The compiler project file |
 | MyStringGrid.dproj | The MSBUILD project file |
 | README.md | The readme for this project |
+
+
+------
+### Demo
+MyStringGrid - (Demo) : https://www.youtube.com/watch?v=JOr5_YSe47M
+
