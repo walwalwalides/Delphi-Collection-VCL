@@ -2,6 +2,10 @@
 - Export StringGrid to different File Formats                 
 ![](MyStringGrid.png) 
 
+## Built With
+
+* [Zeoslib](https://sourceforge.net/projects/zeoslib/) - Zeos Library
+
 
 # Features  
 
