@@ -21,6 +21,8 @@ Principal Software Benefits:
      - Reading and Writing CSV Files
      
      - Save the different parameters of Table (Color ,Width...)
+     
+     - PDF printer
 
 
 ### Main View
