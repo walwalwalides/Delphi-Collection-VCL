@@ -5,9 +5,7 @@ TColorCSV is a Software that deliver a good methode to Create and Save CSV table
 
 ![GitHub](https://img.shields.io/github/license/walwalwalides/TColorCSV)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/walwalwalides/TColorCSV)
-![GitHub last commit](https://img.shields.io/github/last-commit/walwalwalides/TColorCSV)
-[![GitHub stars](https://img.shields.io/github/stars/walwalwalides/TColorCSV)](https://github.com/walwalwalides/TColorCSV/stargazers)
+
 
 
 
