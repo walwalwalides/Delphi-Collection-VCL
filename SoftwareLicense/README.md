@@ -5,7 +5,7 @@ SoftwareLicense is template end user license agreement.
 
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
 
-![GitHub](https://img.shields.io/github/license/walwalwalides/SoftwareLicense)
+![GitHub](https://img.shields.io/github/license/walwalwalides/Delphi-Collection-VCL)
 
 
 
