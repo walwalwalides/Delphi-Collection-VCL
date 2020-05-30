@@ -87,6 +87,7 @@
         <DCC_ExeOutput>BIN</DCC_ExeOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>SoftwareLicense_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -104,10 +105,14 @@
         </DelphiCompile>
         <DCCReference Include="Main.pas">
             <Form>frmMain</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="About.pas">
-            <Form>frmAbout</Form>
+        <DCCReference Include="License.pas">
+            <Form>frmLicense</Form>
+        </DCCReference>
+        <DCCReference Include="uExScrollBox.pas"/>
+        <DCCReference Include="uToolLib.pas"/>
+        <DCCReference Include="About\About.pas">
+            <Form>AboutBox</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -131,12 +136,14 @@
                     <Source Name="MainSource">SoftwareLicense.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\SynEditD.bpl">Datei C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\SynEditD.bpl nicht gefunden</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\PentireFMX.bpl">Datei C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\PentireFMX.bpl nicht gefunden</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Beispiele für gekapselte Komponenten für Automation Server</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\RvDesign110.bpl">Datei C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\RvDesign110.bpl nicht gefunden</Excluded_Packages>
+                    <Excluded_Packages Name="C:\ProgIDE\Komponenten\ComponentAce\ZipForge\Lib\Delphi 10.3 and C++ Builder 10.3 (Rio)\dclZipForged26.bpl">Datei C:\ProgIDE\Komponenten\ComponentAce\ZipForge\Lib\Delphi 10.3 and C++ Builder 10.3 (Rio)\dclZipForged26.bpl nicht gefunden</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Win32\Debug\SoftwareLicense.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="BIN\SoftwareLicense.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>SoftwareLicense.exe</RemoteName>
                         <Overwrite>true</Overwrite>

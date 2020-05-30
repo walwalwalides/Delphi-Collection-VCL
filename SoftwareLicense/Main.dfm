@@ -25,6 +25,7 @@ object frmMain: TfrmMain
       object miExit: TMenuItem
         Caption = 'E&xit'
         ShortCut = 16472
+        OnClick = miExitClick
       end
     end
     object N1: TMenuItem
@@ -32,6 +33,7 @@ object frmMain: TfrmMain
       object miAbout: TMenuItem
         Caption = '&About'
         ShortCut = 16449
+        OnClick = miAboutClick
       end
     end
   end

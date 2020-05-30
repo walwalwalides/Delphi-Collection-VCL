@@ -1,14 +1,14 @@
-﻿{ ============================================
+{ ============================================
   Software Name : 	SoftwareLicense
   ============================================ }
 { ******************************************** }
 { Written By WalWalWalides }
-{ CopyRight © 2020 }
+{ CopyRight � 2020 }
 { Email : walwalwalides@gmail.com }
 { GitHub : https://github.com/walwalwalides }
 { ******************************************** }
 
-unit about;
+unit License;
 
 interface
 
@@ -16,7 +16,7 @@ uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls, Dialogs,
   Buttons, ExtCtrls, shellapi, acPNG, Messages, Variants, uExScrollBox;
 
 type
-  TfrmAbout = class(TForm)
+  TfrmLicense = class(TForm)
     Panel1: TPanel;
     ProgramIcon: TImage;
     ProductName: TLabel;
@@ -43,7 +43,7 @@ type
   end;
 
 var
-  frmAbout: TfrmAbout;
+  frmLicense: TfrmLicense;
   AppDir: String;
   ScrollBox1: TExScrollBox;
   Aboutlbl: TLabel;
@@ -54,10 +54,11 @@ implementation
 
 uses Main;
 
-procedure TfrmAbout.FormActivate(Sender: TObject);
+procedure TfrmLicense.FormActivate(Sender: TObject);
 begin
   Aboutlbl.caption := char(9) + char(9) +
-    'Copyright (C) 2020 - 2021 - WalWalWalides' + char(10) + char(10) +
+    'Copyright (C) 2020 - 2021 - WalWalWalides' + char(10) + char(10) + char(10)
+    + char(10) +
 
     'SoftwareLicense is free.You don''t have to pay for it, and you can use it any'
     + char(10) +
@@ -76,7 +77,7 @@ begin
     'If you simply wish to install and use this software, you need only be aware'
     + char(10) +
     'of the disclaimer conditions in the license, which are set out below.' +
-    char(10) +char(10) +
+    char(10) + char(10) + char(10) + char(10) +
 
     'NO WARRANTY' + char(10) +
 
@@ -95,7 +96,7 @@ begin
     'performance of the program is with you.  Should the program prove defective,'
     + char(10) +
     'you assume the cost of all necessary servicing, repair or correction.' +
-    char(10) + char(10) +
+    char(10) + char(10) + char(10) + char(10) +
     'In no event unless required by applicable law or agreed to in writing will'
     + char(10) +
     'any copyright holder, or any other party who may modify and/or redistribute'
@@ -120,7 +121,7 @@ end;
   ShellExecute(Self.Handle, nil, PChar(Labelurl.caption), nil, nil, SW_SHOW);
   end; }
 
-procedure TfrmAbout.OKButtonClick(Sender: TObject);
+procedure TfrmLicense.OKButtonClick(Sender: TObject);
 begin
   if Not(LicenseRead) then
     // if we have no record of the license being agreed to, ask
@@ -129,43 +130,48 @@ begin
       LicenseRead := True;
 end;
 
-procedure TfrmAbout.ScrollBox1Click(Sender: TObject);
+procedure TfrmLicense.ScrollBox1Click(Sender: TObject);
 begin
   //
-  if (ScrollBox1.VertScrollBar.range = 1000) then
-    if (OKButton.Enabled = false) then
-      OKButton.Enabled := True;
 
 end;
 
-procedure TfrmAbout.ScrollBox1MouseWheel(Sender: TObject; Shift: TShiftState;
+procedure TfrmLicense.ScrollBox1MouseWheel(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
-  if (ScrollBox1.VertScrollBar.range = 1000) then
+  if (ScrollBox1.VertScrollBar.Position > 50) then
+  Begin
     if (OKButton.Enabled = false) then
       OKButton.Enabled := True;
+  end
+  else
+  begin
+    if (OKButton.Enabled = True) then
+      OKButton.Enabled := false;
+  end;
 end;
 
-procedure TfrmAbout.FormCreate(Sender: TObject);
+procedure TfrmLicense.FormCreate(Sender: TObject);
 begin
 
-  self.Width:=570;
-  self.Height:=640;
+  self.Width := 570;
+  self.Height := 640;
 
-  self.Constraints.MinHeight:=640;
-  self.Constraints.MinWidth:=570;
-  self.Constraints.MaxHeight:=640;
-  self.Constraints.MinWidth:=570;
+  self.Constraints.MinHeight := 640;
+  self.Constraints.MinWidth := 570;
+  self.Constraints.MaxHeight := 640;
+  self.Constraints.MinWidth := 570;
 
   Labelurl.Font.Height := -4;
 
   ScrollBox1 := TExScrollBox.create(Panel1);
   ScrollBox1.parent := Panel1;
-  ScrollBox1.top := 88; // 88
-//  ScrollBox1.left := 8; // 8
+  ScrollBox1.top := 88;
   ScrollBox1.left := 100;
-  ScrollBox1.height := 450;
-  ScrollBox1.width := 400;
+  ScrollBox1.left := Panel1.left + (Panel1.Width - ScrollBox1.Width) div 5;
+
+  ScrollBox1.Height := 450;
+  ScrollBox1.Width := 400;
   ScrollBox1.VertScrollBar.Visible := True;
 
   // ------------------------
@@ -173,36 +179,42 @@ begin
   Aboutlbl.parent := ScrollBox1;
   Aboutlbl.top := 3;
   Aboutlbl.left := 3;
-  Aboutlbl.height := 500;
-  Aboutlbl.width := 425;
+  Aboutlbl.Height := 500;
+  Aboutlbl.Width := 425;
 
   ScrollBox1.OnScrollVert := MyScrollVert;
   ScrollBox1.OnScrollHorz := MyScrollHorz;
 
+  self.caption := 'License';
+  OKButton.Enabled := false;
+  OKButton.Cursor:=crHandPoint;
+
 end;
 
-procedure TfrmAbout.FormShow(Sender: TObject);
+procedure TfrmLicense.FormShow(Sender: TObject);
 begin
-  Self.caption := 'About';
+
   ProductName.caption := 'Product Name : SoftwareLicense';
   Version.caption := 'Version: ' + CurVersion;
   AppDir := ExtractFilePath(Application.ExeName);
   Labelurl.caption := AppDir + 'Doc\SoftwareLicense.html';
 end;
 
-procedure TfrmAbout.LabelurlClick(Sender: TObject);
+procedure TfrmLicense.LabelurlClick(Sender: TObject);
 begin
   if FileExists(Labelurl.caption) then
-    ShellExecute(Self.Handle, nil, PChar(Labelurl.caption), nil, nil, SW_SHOW)
+    ShellExecute(self.Handle, nil, PChar(Labelurl.caption), nil, nil, SW_SHOW)
   else
     ShowMessage
       ('Doc Directory not found, download from https://github.com/walwalwalides');
 end;
 
-procedure TfrmAbout.MyScrollVert(Sender: TObject);
+procedure TfrmLicense.MyScrollVert(Sender: TObject);
+var
+  ideff: Integer;
 begin
-
-  if (ScrollBox1.VertScrollBar.Position > 50) then
+  ideff := Aboutlbl.Height - ScrollBox1.Height;
+  if (ScrollBox1.VertScrollBar.Position >= ideff) then
   Begin
     if (OKButton.Enabled = false) then
       OKButton.Enabled := True;
@@ -215,9 +227,9 @@ begin
 
 end;
 
-procedure TfrmAbout.MyScrollHorz(Sender: TObject);
+procedure TfrmLicense.MyScrollHorz(Sender: TObject);
 begin
-//  ScrollBox1.HorzScrollBar.Position := ScrollBox1.HorzScrollBar.Position;
+  // ScrollBox1.HorzScrollBar.Position := ScrollBox1.HorzScrollBar.Position;
 end;
 
 end.
