@@ -34,6 +34,7 @@
 |[LoadUrlGif](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/LoadUrlGif)|Load Gif From URL|
 |[MyStringGrid](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/MyStringGrid)|Export StringGrid to different File Formats|
 |[TColorCSV](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/TColorCSV)|TColorCSV is a Software that deliver a good methode to Create and Save CSV table|
+|[SoftwareLicense](https://github.com/walwalwalides/Delphi-Collection-VCL/tree/master/SoftwareLicense)|SoftwareLicense is template end user license agreement.|
 | README.md | The Readme for this Project
 
 ------
