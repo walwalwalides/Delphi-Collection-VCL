@@ -1,3 +1,12 @@
+{ ============================================
+  Software Name : 	SoftwareLicense
+  ============================================ }
+{ ******************************************** }
+{ Written By WalWalWalides }
+{ CopyRight © 2020 }
+{ Email : walwalwalides@gmail.com }
+{ GitHub : https://github.com/walwalwalides }
+{ ******************************************** }
 unit uToolLib;
 
 interface
