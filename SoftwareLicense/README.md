@@ -24,7 +24,7 @@ Principal Software Benefits:
 
 
 ### Main View
-![](Img/MVSoftwareLicense.png)
+![](Img/VMSoftwareLicense.png)
 
 
 
