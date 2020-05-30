@@ -20,11 +20,7 @@ SoftwareLicense is template end user license agreement.
 
 Principal Software Benefits:
 
-     - Reading and Writing CSV Files
-     
-     - Save the different parameters of Table (Color ,Width...)
-     
-     - PDF printer
+     - Create a license agreement (html or scrollBox ) Foramt. 
 
 
 ### Main View
