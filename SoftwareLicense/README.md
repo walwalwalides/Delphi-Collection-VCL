@@ -1,6 +1,8 @@
 # SoftwareLicense 
 SoftwareLicense is template end user license agreement.
 
+
+
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
 
 ![GitHub](https://img.shields.io/github/license/walwalwalides/TColorCSV)
@@ -9,11 +11,11 @@ SoftwareLicense is template end user license agreement.
 
 
 
-![](TColorCSV.png)
+![](SoftwareLicense.png)
 **Authors:**  *WalWalWalides*
 ------
 
-`TColorCSV` help to create user license agreement.
+`SoftwareLicense` help to create user license agreement.
 
 
 Principal Software Benefits:
@@ -26,7 +28,7 @@ Principal Software Benefits:
 
 
 ### Main View
-![](Img/MainView.png)
+![](Img/MVSoftwareLicense.png)
 
 
 
@@ -34,10 +36,18 @@ Principal Software Benefits:
 
 ## Contains
 
+
 | File | Contents | 
 | --- | --- |
-| .gitignore | Git ignores the Files in this File |
-| README.md | The Readme for this Project|
+| .gitignore | Git ignores the files in this file |
+| About.pas | About view of the programme |
+| Main.pas | Main view of the programme |
+| uExScrollbox.pas | ExScrollbox unit  |
+| uToolLib.pas | ToolLib unit  |
+| SoftwareLicense.dpk | The compiler project file |
+| SoftwareLicense.dproj | The MSBUILD project file |
+| README.md | The readme for this project |
+
 
 ------
 
