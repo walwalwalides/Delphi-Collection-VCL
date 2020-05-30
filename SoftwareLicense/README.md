@@ -20,7 +20,8 @@ SoftwareLicense is template end user license agreement.
 
 Principal Software Benefits:
 
-     - Create a license agreement (html or scrollBox ) Foramt. 
+     - Generate a html arguments liences.
+     - Create a license agreement as scrollbox Text.
 
 
 ### Main View
