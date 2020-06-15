@@ -60,7 +60,7 @@ var
   Swflow, HwFlow: String;
 
 begin
-  {
+
     try
     Inif := TMemIniFile.Create(AppDataPath + IniFileName);
     // setup section
@@ -71,7 +71,7 @@ begin
     // Except
     // ShowMessage('error updating ' + AppDataPath + IniFileName);
     end;
-  }
+
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);

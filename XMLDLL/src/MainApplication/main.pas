@@ -14,7 +14,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, Configuration, StdCtrls, Vcl.Imaging.pngimage, Skins,
-  MainSkinRect, volume, AppEvnts,
+  MainSkinRect,AppEvnts,
   System.Actions, Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.CategoryButtons, Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.ToolWin;
 
 type
@@ -252,7 +252,7 @@ end;
 
 procedure TMainForm.Button1Click(Sender: TObject);
 begin
-  Mute;
+//
 end;
 
 procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
