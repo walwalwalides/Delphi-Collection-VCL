@@ -5,7 +5,7 @@ SoftwareLicense is template end user license agreement.
 
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
 
-![GitHub](https://img.shields.io/github/license/walwalwalides/TColorCSV)
+![GitHub](https://img.shields.io/github/license/walwalwalides/Delphi-Collection-VCL)
 
 
 
@@ -20,11 +20,12 @@ SoftwareLicense is template end user license agreement.
 
 Principal Software Benefits:
 
-     - Create a license agreement (html or scrollBox ) Foramt. 
+     - Generate a html arguments liences.
+     - Create a license agreement as scrollbox Text.
 
 
 ### Main View
-![](Img/MVSoftwareLicense.png)
+![](Img/VMSoftwareLicense.png)
 
 
 
