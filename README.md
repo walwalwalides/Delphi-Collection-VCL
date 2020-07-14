@@ -40,7 +40,7 @@
 ------
 ## Description
 "Delphi-Collection-VCL" contain different examples base on VCL Frameworks.
-This Collection explore different types of themes like (Trayicon,XML files,DLL Resource,Register,Softwarelicence).
+This Collection explore different types of themes like (Trayicon,XML files,DLL Resource,Register,Softwarelicence...).
 
 As always, if you have any ideas or suggestions that would make a exemple more interesting and useful for you and anyone interested,Please let me know. 
 You can reach me under email : walwalwalides@gmail.com ,or just text me.
