@@ -24,7 +24,7 @@
 |[CountDown](https://github.com/walwalwalides/Delphi-Collection/tree/master/CountDown)|How to construct a Timer that counts down from a certain number to indicate the beginning or end of an Event.|
 |[CreEvent](https://github.com/walwalwalides/Delphi-Collection/tree/master/CreEvent)|How Create Stored Event in SQLite.|
 |[NOTyMSG](https://github.com/walwalwalides/Delphi-Collection/tree/master/NOTyMSG)|How to create a custom notification in windows.|
-|[RegisterKey](https://github.com/walwalwalides/Delphi-Collection/tree/master/RegisterKey)|Tools to create key in Registry.|
+|[RegisterKey](https://github.com/walwalwalides/Delphi-Collection/tree/master/RegisterKey)|Tools to create key in Register.|
 |[StudNote](https://github.com/walwalwalides/Delphi-Collection/tree/master/StudNote)|Save student grades and calculate the average.|
 |[TraitExcept](https://github.com/walwalwalides/Delphi-Collection/tree/master/TraitExcept)|How to Define Custom Exceptions in Delphi.|
 |[XMLDLL](https://github.com/walwalwalides/Delphi-Collection/tree/master/XMLDLL)|Relite Main Application with DLL using XML files.|
@@ -38,6 +38,14 @@
 | README.md | The Readme for this Project
 
 ------
+## Description
+"Delphi-Collection-VCL" contain different examples base on VCL Frameworks.
+This Collection explore different types of themes like (Trayicon,XML files,DLL Resource,Register,Softwarelicence).
+
+As always, if you have any ideas or suggestions that would make a exemple more interesting and useful for you and anyone interested,Please let me know. 
+You can reach me under email : walwalwalides@gmail.com ,or just text me.
+
+You are welcome to join and participate to improve any choosed exemple.
 
 # If You Want To Donate!
 
