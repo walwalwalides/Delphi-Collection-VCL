@@ -1,8 +1,10 @@
 # Delphi-Collection
 > My Own Delphi-Collection
+
 <p align="center">
 <img src=Delphi-Collection.jpg />
- p/> 
+ <p/> 
+ 
 **Authors:**  *WalWalWalides*
 ------
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
